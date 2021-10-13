@@ -1,10 +1,4 @@
 
-
-
-
-
-
-
 <!doctype html>
 <html lang="en">
 
@@ -21,23 +15,23 @@
 <body>
   <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Electronics Store</a>
+      <a class="navbar-brand" href="index.php">Electronics Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               All Categories
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="prod_phones.php">Smartphones</a></li>
-              <li><a class="dropdown-item" href="prod_laptops.php">Laptops</a></li>
-              <li><a class="dropdown-item" href="prod_tv.php">Televisions</a></li>
+              <li><a class="dropdown-item" href="index.php?page=prod_phones">Smartphones</a></li>
+              <li><a class="dropdown-item" href="index.php?page=prod_laptops">Laptops</a></li>
+              <li><a class="dropdown-item" href="index.php?page=prod_tv">Televisions</a></li>
             </ul>
           </li>
         </ul>
@@ -52,11 +46,11 @@
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <li><p>Welcome back, <?=$_SESSION['username']?>!</p></li>
-          <li><a class="dropdown-item" href="login.php">Login/Sign Up</a></li>
+          <li><a class="dropdown-item" href="index.php?page=login">Login/Sign Up</a></li>
           <li><a class="dropdown-item" href="index.php?page=profile">My Account</a></li>
         </ul>
         </div>
-      <button type="button" class="btn btn-" href = "index.php?page=cart">Cart</button>
+      <button type="button" class="btn btn-">Cart</button>
       <button type="button" class="btn btn-">Orders</button>
       </div>
       </div>
@@ -129,15 +123,15 @@
           <p>
             <!-- Some representative placeholder content for the three columns of text below the carousel. This is the first column. -->
           </p><br>
-          <p><a class="btn btn-primary" href="prod_headphones.php">View all</a></p>
+          <p><a class="btn btn-primary" href="index.php?page=prod_headphones">View all</a></p>
         </div>
         <div class="col-lg-4">
-          <img src="64.jpg" class="img-fluid">
+          <br><br><br>
+          <img src="71L1PbXlVpL._SL1500_.jpg"  width="400px" class="img-fluid">
           <h2>Cameras</h2>
           <p>
-            <!-- Another exciting bit of representative placeholder content. This time, we've moved on to the second column. -->
           </p><br>
-          <p><a class="btn btn-primary" href="prod_cameras.php">View all </a></p>
+          <p><a class="btn btn-primary" href="index.php?page=prod_cameras">View all </a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
@@ -146,7 +140,7 @@
           <p>
             <!-- And lastly this, the third column of representative placeholder content. -->
           </p><br>
-          <p><a class="btn btn-primary" href="prod_phones.php">View all </a></p>
+          <p><a class="btn btn-primary" href="index.php?page=prod_phones">View all </a></p>
         </div><!-- /.col-lg-4 -->
         <div class="row">
           <hr class="featurette-divider">
@@ -156,7 +150,7 @@
             <p>
               <!-- Some representative placeholder content for the three columns of text below the carousel. This is the first column. -->
             </p><br>
-            <p><a class="btn btn-primary" href="prod_tv.php">View all </a></p>
+            <p><a class="btn btn-primary" href="index.php?page=prod_tv">View all </a></p>
           </div>
           <div class="col-lg-4">
             <img src="1604945711_IMG_1443405.jpg" class="img-fluid">
@@ -173,12 +167,9 @@
             <p>
               <!-- And lastly this, the third column of representative placeholder content. -->
             </p><br>
-            <p><a class="btn btn-primary" href="prod_laptops.php">View all</a></p>  
+            <p><a class="btn btn-primary" href="index.php?page=prod_laptops">View all</a></p>  
           </div>
         </div><!-- /.row -->
-
-
-        <!-- START THE FEATURETTES -->
 
         <hr class="featurette-divider">
         <div class="row featurette">
@@ -238,128 +229,25 @@
           </div>
         </div>
 
-        <!-- <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7" >
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-      </div>
-      <div class="col-md-5">
-
-          
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><image href="61.jpg" height="500" width="500"/>  <rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text> --></svg>
-      </div>
+            </div>
     </div>
     <hr class="featurette-divider">
     </div>
   </main>
 
 
-
-
-  <!-- FOOTER -->
-  <div class="container">
-    <footer class="py-5">
-      <div class="row">
-        <div class="col-2">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
-          </ul>
-        </div>
-
-        <!-- <div class="col-2">
-        <h5>Useful Links</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
-        </ul>
-      </div> -->
-
-        <div class="col-2">
-          <h5>Help</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Track Order</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Track Return / Request Return</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
-
-          </ul>
-        </div>
-
-        <div class="col-2">
-          <h5>Connect With Us</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
-          </ul>
-        </div>
-        <!-- <div class="col-4 offset-1">
-        <form>
-          <h5>Subscribe to our newsletter</h5>
-          <p>Monthly digest of whats new and exciting from us.</p>
-          <div class="d-flex w-100 gap-2">
-            <label for="newsletter1" class="visually-hidden">Email address</label>
-            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-            <button class="btn btn-primary" type="button">Subscribe</button>
-          </div>
-        </form>
-      </div>
-    </div> -->
-        <!-- Back to top button -->
-        <!-- <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top" style="width: min-content ;height: min-content;">Top
-          <i class="fas fa-arrow-up"></i>
-        </button> -->
-        <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;">TOP</button>
-
-
-    
-
-        <!-- Explanation -->
-        <!-- <div class="container mt-4 text-center" style="height: 2000px">
-          <p>
-            Start scrolling the page and a strong
-            <strong>"Back to top" button </strong> will appear in the
-            <strong>bottom right corner</strong> of the screen.
-          </p>
-
-          <p>Click this button and you will be taken to the top of the page.</p>
-        </div> -->
-
-        <!-- <div class="d-flex justify-content-between py-4 my-4 border-top">
-          <p>&copy; 2021 Company, Inc. All rights reserved.</p>
-          <ul class="list-unstyled d-flex">
-            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                  <use xlink:href="#twitter" />
-                </svg></a></li>
-            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                  <use xlink:href="#instagram" />
-                </svg></a></li>
-            <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                  <use xlink:href="#facebook" />
-                </svg></a></li>
-            <p class="float-end"><a href="#">Back to top</a></p>
-          </ul>
-        </div> -->
-    </footer>
-
-  </div>
-  <script src="BackToTop.js"></script>
+    <footer class ="foot">
+            <div>
+                <p>&copy; 2021, Shopping Cart System</p>
+            </div>
+        </footer>
+        <script src="BackToTop.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
-  
-    
-</body>
-
+    </body>
 </html>
+
 
 <!-- Home Page 
      Login/Signup/Signout Page

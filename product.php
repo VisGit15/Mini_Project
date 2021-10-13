@@ -37,23 +37,23 @@ if (isset($_GET['product_id'])) {
 <body>
     <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Electronics Store</a>
+          <a class="navbar-brand" href="index.php">Electronics Store</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   All Categories
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Smartphones</a></li>
-                  <li><a class="dropdown-item" href="#">Laptops</a></li>
-                  <li><a class="dropdown-item" href="#">Televisions</a></li>
+                  <li><a class="dropdown-item" href="index.php?page=prod_phones">Smartphones</a></li>
+                  <li><a class="dropdown-item" href="index.php?page=prod_laptops">Laptops</a></li>
+                  <li><a class="dropdown-item" href="index.php?page=prod_tv">Televisions</a></li>
                 </ul>
               </li>
             </ul>
@@ -67,8 +67,8 @@ if (isset($_GET['product_id'])) {
              Profile
             </button>
             <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a class="dropdown-item" href="#">Login/Sign Up</a></li>
-              <li><a class="dropdown-item" href="#">My Account</a></li>
+              <li><a class="dropdown-item" href="index.php?page=login">Login/Sign Up</a></li>
+              <li><a class="dropdown-item" href="index.php?page=profile">My Account</a></li>
             </ul>
             </div>
           <button type="button" class="btn btn-">Cart</button>
@@ -111,14 +111,14 @@ if (isset($_GET['product_id'])) {
             <div class="container-fluid" style=" background-color: #fff; padding: 11px;">
                 <div class="row">
                     <div class="col-lg-4 order-lg-2 order-1" style="margin-right:50px">
-                        <div class="image_selected"><img src="Images/<?=$product['image_link']?>" width="500" height="500" alt="<?=$product['product_id']?>"></div>
+                        <div class="image_selected"><img src="1612546281_IMG_1484400.jpg" width="500" height="500" alt="<?=$product['product_id']?>"></div>
                     </div>
                     <div class="col-lg-6 order-3">
                         <div class="product_description">
                             <nav>
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Products</a></li>
+                                    <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.php?page=prod_laptops">Products</a></li>
                                     <li class="breadcrumb-item active">Laptops</li>
                                 </ol>
                             </nav>
@@ -144,21 +144,10 @@ if (isset($_GET['product_id'])) {
                         </div>
                     </div>
                 </div>
- -->
-                <br><br>
-
-                                
-        <form action="index.php?page=cart" method="post">
+ -->                            
+        <form action="index.php?page=cart&product_id=<?=$product['product_id']?>" method="post">
             <div class="col-xs-6" style="margin-left: 13px;">
-                                    <div class="product_quantity"> <span>QTY: </span>
-                                        <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
-                                        <div class="quantity_buttons">
-                                            <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
-                                            <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
+            <!-- <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required> -->
             <input type="hidden" name="product_id" value="<?=$product['product_id']?>">
             <input type="submit" value="Add To Cart">
 

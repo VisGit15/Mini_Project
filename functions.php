@@ -3,7 +3,7 @@ function pdo_connect_mysql() {
     // Update the details below with your MySQL details
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
-    $DATABASE_PASS = 'Viki2002!';
+    $DATABASE_PASS = '2002';
     $DATABASE_NAME = 'catalog';
     try {
         return new PDO('mysql:host=' . $DATABASE_HOST . ';dbname=' . $DATABASE_NAME . ';charset=utf8', $DATABASE_USER, $DATABASE_PASS);
@@ -54,7 +54,7 @@ echo <<<EOT
                 <p>&copy; $year, Shopping Cart System</p>
             </div>
         </footer>
-        <script src="script.js"></script>
+        
     </body>
 </html>
 EOT;

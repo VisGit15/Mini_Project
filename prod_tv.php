@@ -59,14 +59,14 @@
 <body>
     <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="homepage.php">Electronics Store</a>
+      <a class="navbar-brand" href="index.php">Electronics Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="homepage.php">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
           </li>
           <!-- <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="">All Categories</a>
@@ -76,11 +76,11 @@
               All Categories
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="prod_phones.php">Smartphones</a></li>
-              <li><a class="dropdown-item" href="prod_laptops.php">Laptops</a></li>
+              <li><a class="dropdown-item" href="index.php?page=prod_phones">Smartphones</a></li>
+              <li><a class="dropdown-item" href="index.php?page=prod_laptops">Laptops</a></li>
               <!-- <li><a class="dropdown-item" href="#"></a></li> -->
               <!-- <li><hr class="dropdown-divider"></li> -->
-              <li><a class="dropdown-item" href="prod_tv.php">Televisions</a></li>
+              <li><a class="dropdown-item" href="index.php?page=prod_tv">Televisions</a></li>
             </ul>
           </li>
           <!-- <li class="nav-item">
@@ -97,8 +97,8 @@
          Profile
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <li><a class="dropdown-item" href="login.php">Login/Sign Up</a></li>
-          <li><a class="dropdown-item" href="#">My Account</a></li>
+          <li><a class="dropdown-item" href="index.php?page=login">Login/Sign Up</a></li>
+          <li><a class="dropdown-item" href="index.php?page=profile">My Account</a></li>
         </ul>
         </div>
       <button type="button" class="btn btn-">Cart</button>
