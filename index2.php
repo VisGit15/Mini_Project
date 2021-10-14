@@ -2,7 +2,7 @@
 
 <?php
 // connect to database
-$con = mysqli_connect('localhost','root','Viki2002');
+$con = mysqli_connect('localhost','root','Viki2002!');
 mysqli_select_db($con, 'reg');
 // define how many results you want per page
 $results_per_page = 10;
