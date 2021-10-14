@@ -69,7 +69,7 @@ $(document).ready(function(){
 </head>
 <body>
     <div class="search-box">
-        <input type="text" autocomplete="off" placeholder="Search a Product  ..." />
+        <input type="text" autocomplete="on" placeholder="Search a Product  ..." />
         <div class="result"></div>
     </div>
 </body>

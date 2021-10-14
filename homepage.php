@@ -1,7 +1,20 @@
+<?php
+
+$q = "SELECT * FROM prod_cat";
+$query = $pdo->prepare($q);
+$query->execute();
+$result = $query->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+
+
+?>
+
+
 
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +22,69 @@
   <link href="bootstrap.min.css" rel="stylesheet">
   <link href="carousel.css" rel="stylesheet">
   <link href="searchbar.css" rel="stylesheet">
+  <style>
+    body{
+        font-family: Arial, sans-serif;
+    }
+    /* Formatting search box */
+    .search-box{
+        width: 300px;
+        position: relative;
+        display: inline-block;
+        font-size: 14px;
+    }
+    .search-box input[type="text"]{
+        height: 32px;
+        padding: 5px 10px;
+        border: 1px solid #CCCCCC;
+        font-size: 14px;
+    }
+    .result{
+        position: absolute;        
+        z-index: 999;
+        top: 100%;
+        left: 0;
+    }
+    .search-box input[type="text"], .result{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    /* Formatting result items */
+    .result p{
+        margin: 0;
+        padding: 7px 10px;
+        border: 1px solid #CCCCCC;
+        border-top: none;
+        cursor: pointer;
+    }
+    .result p:hover{
+        background: #f2f2f2;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.search-box input[type="text"]').on("keyup input", function(){
+        /* Get input value on change */
+        var inputVal = $(this).val();
+        var resultDropdown = $(this).siblings(".result");
+        if(inputVal.length){
+            $.get("search.php", {term: inputVal}).done(function(data){
+                // Display the returned data in browser
+                resultDropdown.html(data);
+            });
+        } else{
+            resultDropdown.empty();
+        }
+    });
+    
+    // Set search input value on click of result item
+    $(document).on("click", ".result p", function(){
+        $(this).parents(".search-box").find('input[type="text"]').val($(this).text());
+        $(this).parent(".result").empty();
+    });
+});
+</script>
   
 </head> 
 
@@ -35,8 +111,13 @@
             </ul>
           </li>
         </ul>
+<!-- index.php?page=prod_search&product_id=<?=$result['product_id']?> -->
         <form class="d-flex" action="phpsearch.php" method="post">
-          <input class="form-control me-2" type="text" name ="search" placeholder="Search" aria-label="Search">
+      <div class="search-box">
+        <input type="text" autocomplete="off" placeholder="Search a Product  ..." />
+        <div class="result"></div>
+    </div>
+          <!-- <input class="form-control me-2" type="text" name ="search" placeholder="Search" aria-label="Search"> -->
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
         <div class="btn-group dropdown ml" role="group" aria-label="Button group with nested dropdown" >
@@ -241,7 +322,9 @@
                 <p>&copy; 2021, Shopping Cart System</p>
             </div>
         </footer>
-  <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;">TOP</button>
+  <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+</svg></button>
         <script src="BackToTop.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"

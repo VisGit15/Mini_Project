@@ -2,7 +2,7 @@
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 try{
-    $pdo = new PDO("mysql:host=localhost;dbname=reg", "root", "2002");
+    $pdo = new PDO("mysql:host=localhost;dbname=catalog", "root", "2002");
     // Set the PDO error mode to exception
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch(PDOException $e){
@@ -13,7 +13,7 @@ try{
 try{
     if(isset($_REQUEST["term"])){
         // create prepared statement
-        $sql = "SELECT * FROM laptops WHERE prod_name LIKE :term";
+        $sql = "SELECT * FROM prod_cat WHERE name LIKE :term LIMIT 5";
         $stmt = $pdo->prepare($sql);
         $term = $_REQUEST["term"] . '%';
         // bind parameters to statement
@@ -22,7 +22,7 @@ try{
         $stmt->execute();
         if($stmt->rowCount() > 0){
             while($row = $stmt->fetch()){
-                echo "<p>" . $row["prod_name"] . "</p>";
+                echo "<p>" . $row["name"] . "</p>";
             }
         } else{
             echo "<p>No matches found</p>";
