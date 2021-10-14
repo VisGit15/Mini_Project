@@ -2,7 +2,7 @@
     //include configuration file
     require 'config.php';
 
-    $start = 0;  $per_page = 5;
+    $start = 0;  $per_page = 4;
     $page_counter = 0;
     $next = $page_counter + 1;
     $previous = $page_counter - 1;
@@ -164,7 +164,7 @@
 
 <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;">TOP</button>
   <script src="BackToTop.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./pagination.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="pagination.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>

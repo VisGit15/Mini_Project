@@ -15,23 +15,23 @@
 <body>
   <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">Electronics Store</a>
+      <a class="navbar-brand" href="homepage.php">Electronics Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+            <a class="nav-link active" aria-current="page" href="homepage.php">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               All Categories
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="index.php?page=prod_phones">Smartphones</a></li>
-              <li><a class="dropdown-item" href="index.php?page=prod_laptops">Laptops</a></li>
-              <li><a class="dropdown-item" href="index.php?page=prod_tv">Televisions</a></li>
+              <li><a class="dropdown-item" href="prod_phones.php">Smartphones</a></li>
+              <li><a class="dropdown-item" href="prod_laptops.php">Laptops</a></li>
+              <li><a class="dropdown-item" href="prod_tv.php">Televisions</a></li>
             </ul>
           </li>
         </ul>
@@ -46,8 +46,8 @@
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
           <li><p>Welcome back, <?=$_SESSION['username']?>!</p></li>
-          <li><a class="dropdown-item" href="index.php?page=login">Login/Sign Up</a></li>
-          <li><a class="dropdown-item" href="index.php?page=profile">My Account</a></li>
+          <li><a class="dropdown-item" href="login.php">Login/Sign Up</a></li>
+          <li><a class="dropdown-item" href="profile.php">My Account</a></li>
         </ul>
         </div>
       <button type="button" class="btn btn-">Cart</button>
@@ -123,7 +123,7 @@
           <p>
             <!-- Some representative placeholder content for the three columns of text below the carousel. This is the first column. -->
           </p><br>
-          <p><a class="btn btn-primary" href="index.php?page=prod_headphones">View all</a></p>
+          <p><a class="btn btn-primary" href="prod_headphones">View all</a></p>
         </div>
         <div class="col-lg-4">
           <br><br><br>
@@ -131,7 +131,7 @@
           <h2>Cameras</h2>
           <p>
           </p><br>
-          <p><a class="btn btn-primary" href="index.php?page=prod_cameras">View all </a></p>
+          <p><a class="btn btn-primary" href="prod_cameras.php">View all </a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <!-- <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg> -->
@@ -140,7 +140,7 @@
           <p>
             <!-- And lastly this, the third column of representative placeholder content. -->
           </p><br>
-          <p><a class="btn btn-primary" href="index.php?page=prod_phones">View all </a></p>
+          <p><a class="btn btn-primary" href="prod_phones.php">View all </a></p>
         </div><!-- /.col-lg-4 -->
         <div class="row">
           <hr class="featurette-divider">
@@ -150,7 +150,7 @@
             <p>
               <!-- Some representative placeholder content for the three columns of text below the carousel. This is the first column. -->
             </p><br>
-            <p><a class="btn btn-primary" href="index.php?page=prod_tv">View all </a></p>
+            <p><a class="btn btn-primary" href="prod_tv.php">View all </a></p>
           </div>
           <div class="col-lg-4">
             <img src="1604945711_IMG_1443405.jpg" class="img-fluid">
@@ -167,7 +167,7 @@
             <p>
               <!-- And lastly this, the third column of representative placeholder content. -->
             </p><br>
-            <p><a class="btn btn-primary" href="index.php?page=prod_laptops">View all</a></p>  
+            <p><a class="btn btn-primary" href="prod_laptops.php">View all</a></p>  
           </div>
         </div><!-- /.row -->
 
@@ -241,6 +241,7 @@
                 <p>&copy; 2021, Shopping Cart System</p>
             </div>
         </footer>
+  <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;">TOP</button>
         <script src="BackToTop.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"

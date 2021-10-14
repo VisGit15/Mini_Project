@@ -81,7 +81,7 @@ if ($products_in_cart) {
 
 <div class="cart content-wrapper">
     <h1>Shopping Cart</h1>
-    <form action="index.php?page=cart&product_id=<?=$product['product_id']?>" method="post">
+    <form action="index.php?page=cart" method="post">
         <table>
             <thead>
                 <tr>
@@ -105,15 +105,15 @@ if ($products_in_cart) {
                         </a>
                     </td>
                     <td>
-                        <a href="index.php?page=product&product_id=<?=$product['product_id']?>"><?php echo $product['name']?></a>
+                        <a href="index.php?page=product&product_id=<?=$product['product_id']?>"><?=$product['name']?></a>
                         <br>
                         <a href="index.php?page=cart&remove=<?=$product['product_id']?>" class="remove">Remove</a>
                     </td>
-                    <td class="price">&#8377;<?php echo $product['sale_price']?></td>
+                    <td class="price">&#8377;<?=$product['sale_price']?></td>
                     <td class="quantity">
                         <input type="number" name="quantity-<?=$product['product_id']?>" value="<?=$products_in_cart[$product['product_id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
                     </td>
-                    <td class="price">&#8377;<?php echo $product['sale_price'] * $products_in_cart[$product['product_id']]?></td>
+                    <td class="price">&#8377;<?=$product['sale_price'] * $products_in_cart[$product['product_id']]?></td>
                 </tr>
                 <?php endforeach; ?>
                 <?php endif; ?>

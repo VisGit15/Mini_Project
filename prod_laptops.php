@@ -1,6 +1,6 @@
 <?php 
     require 'config.php';
-    $start = 0;  $per_page = 5;
+    $start = 0;  $per_page = 4;
     $page_counter = 0;
     $next = $page_counter + 1;
     $previous = $page_counter - 1;
@@ -49,16 +49,16 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+            <a class="nav-link active" aria-current="page" href="homepage.php">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               All Categories
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="index.php?page=prod_phones">Smartphones</a></li>
-              <li><a class="dropdown-item" href="index.php?page=prod_laptops">Laptops</a></li>
-              <li><a class="dropdown-item" href="index.php?page=prod_tv">Televisions</a></li>
+              <li><a class="dropdown-item" href="prod_phones.php">Smartphones</a></li>
+              <li><a class="dropdown-item" href="prod_laptops.php">Laptops</a></li>
+              <li><a class="dropdown-item" href="prod_tv.php">Televisions</a></li>
             </ul>
           </li>
         </ul>
@@ -72,8 +72,8 @@
          Profile
         </button>
         <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <li><a class="dropdown-item" href="index.php?page=login">Login/Sign Up</a></li>
-          <li><a class="dropdown-item" href="index.php?page=profile">My Account</a></li>
+          <li><a class="dropdown-item" href="login.php">Login/Sign Up</a></li>
+          <li><a class="dropdown-item" href="#">My Account</a></li>
         </ul>
         </div>
       <button type="button" class="btn btn-">Cart</button>
@@ -93,7 +93,7 @@
 <?php foreach($result as $data) : ?>
         <article class="postcard dark red">
             <a class="postcard__img_link" href="index.php?page=product&product_id=<?=$data['product_id']?>">
-                <img class="postcard__img" src="Images/<?=$data['image_link']?>" alt="<?php echo $data['product_id']; ?>">   
+                <img class="postcard__img" src="Images/<?=$data['image_link']?>" alt="<?php echo $data['name']; ?>">   
             </a>
             <div class="postcard__text">
                 <br><h1 class="postcard__title red"><a href="index.php?page=product&product_id=<?=$data['product_id']?>"><?php echo $data['name']; ?></a></h1><br>
