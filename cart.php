@@ -113,7 +113,7 @@ if ($products_in_cart) {
                     <td class="quantity">
                         <input type="number" name="quantity-<?=$product['product_id']?>" value="<?=$products_in_cart[$product['product_id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
                     </td>
-                    <td class="price">&#8377;<?=$product['sale_price'] * $products_in_cart[$product['product_id']]?></td>
+                    <td class="price">&#8377;<?=$product['sale_price'] * $products_in_cart[$product['proid']]?></td>
                 </tr>
                 <?php endforeach; ?>
                 <?php endif; ?>

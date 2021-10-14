@@ -3,8 +3,8 @@
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'Viki2002!');
-define('DB_NAME', 'catalog');
+define('DB_PASSWORD', '2002');
+define('DB_NAME', 'reg');
 
 
  
@@ -21,8 +21,8 @@ try{
 
 
 $sql = "select * from laptops where prod_name like '%search%'";
-$result = pdo -> exec($sql);
-if ($result->num_rows > 0){
+$result = $pdo -> exec($sql);
+if ($result->$num_rows){
 while($row = $result->fetch_assoc() ){
     echo $row["prod_price"];
 }

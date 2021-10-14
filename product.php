@@ -111,7 +111,7 @@ if (isset($_GET['product_id'])) {
             <div class="container-fluid" style=" background-color: #fff; padding: 11px;">
                 <div class="row">
                     <div class="col-lg-4 order-lg-2 order-1" style="margin-right:50px">
-                        <div class="image_selected"><img src="1612546281_IMG_1484400.jpg" width="500" height="500" alt="<?=$product['product_id']?>"></div>
+                        <div class="image_selected"><img src="Images/<?=$product['image_link']?>" width="500" height="500" alt="<?=$product['product_id']?>"></div>
                     </div>
                     <div class="col-lg-6 order-3">
                         <div class="product_description">
@@ -129,32 +129,45 @@ if (isset($_GET['product_id'])) {
                             <div> <span class="product_info"><?=$product['description']?><span></div><br>
                             <hr class="singleline">
                             <div class="row">
-<!--                                 <div class="col-xs-6" style="margin-left: 13px;">
-                                    <div class="product_quantity"> <span>QTY: </span> <input id="quantity_input" type="text" pattern="[0-9]*" value="1">
-                                        <div class="quantity_buttons">
-                                            <div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
-                                            <div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <input type="hidden" name="product_id" value="<?=$product['id']?>">
-                                <div class="col-xs-6"> <button type="button" class="btn btn-primary shop-button">Add to Cart</button> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
- -->                            
-        <form action="index.php?page=cart&product_id=<?=$product['product_id']?>" method="post">
-            <div class="col-xs-6" style="margin-left: 13px;">
-            <!-- <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required> -->
+
+
+<div class="product content-wrapper">
+    <img src="imgs/<?=$product['img']?>" width="500" height="500" alt="<?=$product['name']?>">
+    <div>
+        <h1 class="name"><?=$product['name']?></h1>
+        <span class="price">
+            &dollar;<?=$product['sale_price']?>
+            <!-- <?php if ($product['rrp'] > 0): ?>
+            <span class="rrp">&dollar;<?=$product['rrp']?></span>
+            <?php endif; ?> -->
+        </span>
+        <form action="index.php?page=cart" method="post">
+            <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
             <input type="hidden" name="product_id" value="<?=$product['product_id']?>">
             <input type="submit" value="Add To Cart">
-
-                                            <!-- <div class="col-xs-6"> <button type="button" class="btn btn-primary shop-button"><a href="index.php?page=cart">Add to Cart</a></button> 
-                                </div> -->
         </form>
-        </div>
+<!--         <div class="description">
+            <?=$product['description']?>
+        </div> -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="row row-underline">
                     <div class="col-md-6"> <span class=" deal-text">Specifications</span> </div>
                     <div class="col-md-6"> <a href="#" data-abc="true"> <span class="ml-auto view-all"></span> </a> </div>
