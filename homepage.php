@@ -111,8 +111,7 @@ $(document).ready(function(){
             </ul>
           </li>
         </ul>
-<!-- index.php?page=prod_search&product_id=<?=$result['product_id']?> -->
-        <form class="d-flex" action="phpsearch.php" method="post">
+        <form class="d-flex" action="index.php?page=product&product_id=<?=$result['product_id']?>" method="post">
       <div class="search-box">
         <input type="text" autocomplete="off" placeholder="Search a Product  ..." />
         <div class="result"></div>
@@ -204,7 +203,7 @@ $(document).ready(function(){
           <p>
             <!-- Some representative placeholder content for the three columns of text below the carousel. This is the first column. -->
           </p><br>
-          <p><a class="btn btn-primary" href="prod_headphones">View all</a></p>
+          <p><a class="btn btn-primary" href="prod_headphones.php">View all</a></p>
         </div>
         <div class="col-lg-4">
           <br><br><br>

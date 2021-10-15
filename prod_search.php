@@ -5,9 +5,9 @@ if (isset($_GET['product_id'])) {
     $stmt = $pdo->prepare("SELECT * FROM prod_cat where product_id = ?");
     $stmt->execute([$_GET['product_id']]);
     // Fetch the product from the database and return the result as an Array
-    $product = $stmt->fetch(PDO::FETCH_ASSOC);
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
     // Check if the product exists (array is not empty)
-    if (!$product) {
+    if (!$result) {
         // Simple error to display if the id for the product doesn't exists (array is empty)
         exit('Product does not exist!');
     }
@@ -17,20 +17,26 @@ if (isset($_GET['product_id'])) {
 }
 ?>
 
-
+<<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
 <div class="product content-wrapper">
-    <img src="imgs/<?=$product['img']?>" width="500" height="500" alt="<?=$product['name']?>">
+    <img src="imgs/<?=$result['img']?>" width="500" height="500" alt="<?=$result['name']?>">
     <div>
-        <h1 class="name"><?=$product['name']?></h1>
+        <h1 class="name"><?=$result['name']?></h1>
         <span class="price">
-            &dollar;<?=$product['sale_price']?>
+            &dollar;<?=$result['sale_price']?>
             <!-- <?php if ($product['rrp'] > 0): ?>
             <span class="rrp">&dollar;<?=$product['rrp']?></span>
             <?php endif; ?> -->
         </span>
         <form action="index.php?page=cart" method="post">
-            <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
-            <input type="hidden" name="product_id" value="<?=$product['product_id']?>">
+            <input type="number" name="quantity" value="1" min="1" max="<?=$result['quantity']?>" placeholder="Quantity" required>
+            <input type="hidden" name="product_id" value="<?=$result['product_id']?>">
             <input type="submit" value="Add To Cart">
         </form>
 <!--         <div class="description">
@@ -38,3 +44,5 @@ if (isset($_GET['product_id'])) {
         </div> -->
     </div>
 </div>
+</body>
+</html>
