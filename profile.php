@@ -1,10 +1,3 @@
-<?php 
-
-$stmt = $pdo->prepare("SELECT * FROM users where id =". $_SESSION['id']);
-$stmt->execute();
-$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-?>
 
 
 <!DOCTYPE html>
@@ -15,59 +8,61 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
       <link href="bootstrap.min.css" rel="stylesheet">
-  <link href="carousel.css" rel="stylesheet">
   <link href="searchbar.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-  <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Electronics Store</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="#">Laptop</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              All Categories
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="prod_phones.php">Smartphones</a></li>
-              <li><a class="dropdown-item" href="prod_laptops.php">Laptops</a></li>
-              <li><a class="dropdown-item" href="prod_tv.php">Televisions</a></li>
-            </ul>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="#">Smartphone</a>
           </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="#">Television</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="#">Headphone</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="#">Camera</a>
+          </li>
+
         </ul>
-        <form class="d-flex" action="phpsearch.php" method="post">
-          <input class="form-control me-2" type="text" name ="search" placeholder="Search" aria-label="Search">
+        <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-        <div class="btn-group dropdown ml" role="group" aria-label="Button group with nested dropdown" >
-          <div class="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-outline-Secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 20px;">
-         Profile
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <li><p>Welcome back, <?=$_SESSION['username']?>!</p></li>
-          <li><a class="dropdown-item" href="login.php">Login/Sign Up</a></li>
-          <li><a class="dropdown-item" href="index.php?page=profile">My Account</a></li>
+        
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="#">Profile</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="#">Login/Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><span
+                class="material-icons">shopping_cart</span></a>
+          </li>
         </ul>
-        </div>
-      <button type="button" class="btn btn-" href = "index.php?page=cart">Cart</button>
-      <button type="button" class="btn btn-">Orders</button>
-      </div>
-      </div>
       </div>
     </div>
+    </div>
   </nav>
-  <br>
-  <br>    
+  <br><br>   
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <div class="col-md-3 border-right">
@@ -75,14 +70,14 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold"><?php echo $user['username']?></span><span class="text-black-50"><?php echo $user['id']?></span><span> </span></div>
             <?php endforeach; ?>
         </div>
-        <div class="col-md-5 border-right">
-            <div class="p-3 py-5">
+        <div class="col-md-5">
+            <div class="p-3 py-1">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h4 class="text-right">Profile Settings</h4>
                 </div>
-                <div class="row mt-2">
-                    <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-                    <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+                <div class="row mt-3">
+                    <div class="col-md-12"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
+                    <!-- <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div> -->
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
@@ -90,13 +85,13 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
                     <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
                     <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-                    <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                    <!-- <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div> -->
                     <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
-                    <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
-                    <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
+                    <!-- <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div> -->
+                <!-- </div>
+                <div class="row mt-3"> -->
+                    <div class="col-md-12"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
+                    <!-- <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div> -->
                 </div>
                 <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"><a href="index.php">Save Profile</a></button></div>
             </div>
@@ -111,6 +106,23 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div> -->
     </div>
 </div>
+
+<!-- FOOTER -->
+  <div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24">
+            <use xlink:href="#bootstrap" />
+          </svg>
+          <h5></h5>
+        </a>
+        <span class="text-muted">&copy; 2021 Company, Inc</span>
+      </div>
+    </footer>
+  </div>
+
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="BackToTop.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"

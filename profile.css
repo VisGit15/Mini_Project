@@ -1,14 +1,14 @@
-body {
+/*body {
     background: rgb(99, 39, 120)
-}
+}*/
 
 .form-control:focus {
     box-shadow: none;
-    border-color: #BA68C8
+    border-color: #0f0e0e
 }
 
 .profile-button {
-    background: rgb(99, 39, 120);
+    background: #0f0e0e;
     box-shadow: none;
     border: none
 }
