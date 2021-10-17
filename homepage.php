@@ -25,19 +25,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="#">Laptop</a>
+            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptop</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="#">Smartphone</a>
+            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphone</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="#">Television</a>
+            <a class="nav-link active" aria-current="page" href="prod_tv.php">Television</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="#">Headphone</a>
+            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphone</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="#">Camera</a>
+            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Camera</a>
           </li>
 
         </ul>
