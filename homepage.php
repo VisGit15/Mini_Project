@@ -25,19 +25,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptop</a>
+            <a class="nav-link active" aria-current="page" href="index.php?page=prod_laptops">Laptop</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphone</a>
+            <a class="nav-link active" aria-current="page" href="index.php?page=prod_phones">Smartphone</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_tv.php">Television</a>
+            <a class="nav-link active" aria-current="page" href="index.php?page=prod_tv">Television</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphone</a>
+            <a class="nav-link active" aria-current="page" href="index.php?page=prod_headphones">Headphone</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Camera</a>
+            <a class="nav-link active" aria-current="page" href="index.php?page=prod_cameras">Camera</a>
           </li>
 
         </ul>
@@ -48,13 +48,13 @@
         
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
+            <a class="nav-link active" aria-current="page" href="index.php?page=profile">Profile</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="login.php">Login/Signup</a>
+            <a class="nav-link active" aria-current="page" href="index.php?page=login">Login/Signup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><span
+            <a class="nav-link active" aria-current="page" href="index.php?page=shopping_cart"><span
                 class="material-icons">shopping_cart</span></a>
           </li>
         </ul>
@@ -126,21 +126,24 @@
           <h2>Headphones</h2>
           <p>
           </p><br>
-          <p><a class="btn btn-primary" href="#">View all</a></p>
+          <p><a class="btn btn-primary" href="index.php?page=prod_headphones">View all</a></p>
         </div>
         <div class="col-lg-4">
-          <img src="64.jpg" class="img-fluid" width="100%">
-          <h2>Smart Watches</h2>
+          <br>
+          <br>
+          <br>
+          <img src="71L1PbXlVpL._SL1500_.jpg" class="img-fluid" width="100%">
+          <h2>Cameras</h2>
           <p>
           </p><br>
-          <p><a class="btn btn-primary" href="#">View all </a></p>
+          <p><a class="btn btn-primary" href="index.php?page=prod_cameras">View all </a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img src="63.jpg" class="img-fluid" width="100%">
           <h2>Smart Phones</h2>
           <p>
           </p><br>
-          <p><a class="btn btn-primary" href="#">View all </a></p>
+          <p><a class="btn btn-primary" href="index.php?page=prod_phones">View all </a></p>
         </div><!-- /.col-lg-4 -->
         <div class="row">
           <hr class="featurette-divider">
@@ -149,7 +152,7 @@
             <h2>Televisions</h2>
             <p>
             </p><br>
-            <p><a class="btn btn-primary" href="#">View all </a></p>
+            <p><a class="btn btn-primary" href="index.php?page=prod_tv">View all </a></p>
           </div>
           <div class="col-lg-4">
             <img src="1604945711_IMG_1443405.jpg" class="img-fluid" width="100%">
@@ -163,7 +166,7 @@
             <h2>Laptops</h2>
             <p>
             </p><br>
-            <p><a class="btn btn-primary" href="#">View all</a></p>
+            <p><a class="btn btn-primary" href="index.php?page=prod_laptops">View all</a></p>
           </div>
         </div><!-- /.row -->
 
@@ -186,9 +189,13 @@
             <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
               height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
               preserveAspectRatio="xMidYMid slice" focusable="false">
-              <image href="71X6mnUDSzL.SL1500.jpg" width="100%" class="img-fluid" />
+              <image href="71X6mnUDSzL._SL1500_.jpg" width="100%" class="img-fluid" />
               <title>Placeholder</title><!-- <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text> -->
-            </svg><button class="btn btn-primary"> PRE-ORDER </button>
+            </svg>
+            <form action="iphone13.php">
+              <button class="btn btn-primary" > PRE-ORDER </button>
+            </form>
+            
           </div>
         </div>
 
@@ -213,7 +220,9 @@
               <image href="lg_oled.jpg" width="100%" />
               <title>Placeholder</title><!-- <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text> -->
             </svg>
-            <button class="btn btn-primary"> BUY NOW </button>
+            <form action="lgc1.php" method="POST">
+              <button class="btn btn-primary"> BUY NOW </button>
+            </form>
           </div>
         </div>
       </div>
