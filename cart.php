@@ -1,8 +1,8 @@
 <?php
 // If the user clicked the add to cart button on the product page we can check for the form data
-if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['product_id']) && is_numeric($_POST['quantity'])) {
+if (isset($_POST['product_id'], $_POST['quantity']) && $_POST['product_id'] && is_numeric($_POST['quantity'])) {
     // Set the post variables so we easily identify them, also make sure they are integer
-    $product_id = (int)$_POST['product_id'];
+    $product_id = $_POST['product_id'];
     $quantity = (int)$_POST['quantity'];
     // Prepare the SQL statement, we basically are checking if the product exists in our databaser
     $stmt = $pdo->prepare('SELECT * FROM prod_cat WHERE product_id = ?');
@@ -30,7 +30,7 @@ if (isset($_POST['product_id'], $_POST['quantity']) && is_numeric($_POST['produc
     exit;
 }
 // Remove product from cart, check for the URL param "remove", this is the product id, make sure it's a number and check if it's in the cart
-if (isset($_GET['remove']) && is_numeric($_GET['remove']) && isset($_SESSION['cart']) && isset($_SESSION['cart'][$_GET['remove']])) {
+if (isset($_GET['remove']) && $_GET['remove'] && isset($_SESSION['cart']) && isset($_SESSION['cart'][$_GET['remove']])) {
     // Remove the product from the shopping cart
     unset($_SESSION['cart'][$_GET['remove']]);
 }
@@ -101,7 +101,7 @@ if ($products_in_cart) {
                 <tr>
                     <td class="img">
                         <a href="index.php?page=product&product_id=<?=$product['product_id']?>">
-                            <img src="63.jpg" width="50" height="50" alt="<?=$product['name']?>">
+                            <img src="Images/<?=$product['image_link']?>" width="50" height="50" alt="<?=$product['name']?>">
                         </a>
                     </td>
                     <td>
@@ -113,7 +113,7 @@ if ($products_in_cart) {
                     <td class="quantity">
                         <input type="number" name="quantity-<?=$product['product_id']?>" value="<?=$products_in_cart[$product['product_id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
                     </td>
-                    <td class="price">&#8377;<?=$product['sale_price'] * $products_in_cart[$product['proid']]?></td>
+                    <td class="price">&#8377;<?=$product['sale_price'] * $products_in_cart[$product['product_id']]?></td>
                 </tr>
                 <?php endforeach; ?>
                 <?php endif; ?>

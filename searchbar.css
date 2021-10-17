@@ -45,9 +45,10 @@
 		background: #fff;
 		padding-left: 16px;
 		padding-right: 16px;
-		border-bottom: 1px solid #ffffff;
+		/*border-bottom: 1px solid #ffffff;*/
 		box-shadow: 0 0 4px rgba(235, 222, 222, 0.1);
 	}
+
 	.nav-link img {
 		border-radius: 50%;
 		width: 36px;
@@ -57,7 +58,7 @@
 		margin-right: 10px;
 	}
 	.navbar .navbar-brand {
-		color: rgb(0, 0, 0);
+		color: #fff;
 		padding-left: 0;
 		padding-right: 0px;
 		font-weight: 520;
