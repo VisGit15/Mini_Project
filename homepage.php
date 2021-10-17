@@ -17,7 +17,7 @@
  
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Electronics Store</a>
+      <a class="navbar-brand" href="index.php">Electronics Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -48,10 +48,10 @@
         
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="#">Profile</a>
+            <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="#">Login/Signup</a>
+            <a class="nav-link active" aria-current="page" href="login.php">Login/Signup</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"><span
@@ -237,6 +237,8 @@
       </div>
     </footer>
   </div>
+
+  
   <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;"><svg
       xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill"
       viewBox="0 0 16 16">
