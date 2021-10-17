@@ -34,52 +34,54 @@ if (isset($_GET['id'])) {
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.php">Electronics Store</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  All Categories
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="index.php?page=prod_phones">Smartphones</a></li>
-                  <li><a class="dropdown-item" href="index.php?page=prod_laptops">Laptops</a></li>
-                  <li><a class="dropdown-item" href="index.php?page=prod_tv">Televisions</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <div class="btn-group dropdown ml" role="group" aria-label="Button group with nested dropdown" >
-              <div class="btn-group" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn btn-outline-Secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 20px;">
-             Profile
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a class="dropdown-item" href="index.php?page=login">Login/Sign Up</a></li>
-              <li><a class="dropdown-item" href="index.php?page=profile">My Account</a></li>
-            </ul>
-            </div>
-          <button type="button" class="btn btn-">Cart</button>
-          <button type="button" class="btn btn-">Orders</button>
-          </div>
-          </div>
-          </div>
-        </div>
-      </nav>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.php">Electronics Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptop</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphone</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_tv.php">Television</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphone</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Camera</a>
+          </li>
 
-      <br><br>
-    <div class="super_container" style="margin-left: 200px; background-color: #ffffff;">
+        </ul>
+        <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="login.php">Login/Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><span
+                class="material-icons">shopping_cart</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <br><br>    <div class="super_container" style="margin-left: 200px; background-color: #ffffff;">
         <header class="header" style="display: none;">
             <div class="header_main">
                 <div class="container">
