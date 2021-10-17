@@ -132,7 +132,7 @@
           <br>
           <br>
           <br>
-          <img src="71L1PbXlVpL._SL1500_.jpg" class="img-fluid" width="100%">
+          <img src="71L1PbXlVpL._SL1500_.jpg" class="img-fluid" width="97%">
           <h2>Cameras</h2>
           <p>
           </p><br>
