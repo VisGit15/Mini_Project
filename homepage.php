@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hello, world!</title>
   <link href="bootstrap.min.css" rel="stylesheet">
-  <link href="bootstrap-5.1.0-examples/carousel/carousel.css" rel="stylesheet">
+  <link href="carousel.css" rel="stylesheet">
   <link href="searchbar.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -25,19 +25,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="index.php?page=prod_laptops">Laptop</a>
+            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptops</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="index.php?page=prod_phones">Smartphone</a>
+            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphones</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="index.php?page=prod_tv">Television</a>
+            <a class="nav-link active" aria-current="page" href="prod_tv.php">Televisions</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="index.php?page=prod_headphones">Headphone</a>
+            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphones</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="index.php?page=prod_cameras">Camera</a>
+            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Cameras</a>
           </li>
 
         </ul>
@@ -48,13 +48,13 @@
         
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="index.php?page=profile">Profile</a>
+            <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="index.php?page=login">Login/Signup</a>
+            <a class="nav-link active" aria-current="page" href="login.php">Login/Signup</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php?page=shopping_cart"><span
+            <a class="nav-link active" aria-current="page" href="shopping_cart.php"><span
                 class="material-icons">shopping_cart</span></a>
           </li>
         </ul>
@@ -126,7 +126,7 @@
           <h2>Headphones</h2>
           <p>
           </p><br>
-          <p><a class="btn btn-primary" href="index.php?page=prod_headphones">View all</a></p>
+          <p><a class="btn btn-primary" href="prod_headphones.php">View all</a></p>
         </div>
         <div class="col-lg-4">
           <br>
@@ -136,14 +136,14 @@
           <h2>Cameras</h2>
           <p>
           </p><br>
-          <p><a class="btn btn-primary" href="index.php?page=prod_cameras">View all </a></p>
+          <p><a class="btn btn-primary" href="prod_cameras.php">View all </a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
           <img src="63.jpg" class="img-fluid" width="100%">
           <h2>Smart Phones</h2>
           <p>
           </p><br>
-          <p><a class="btn btn-primary" href="index.php?page=prod_phones">View all </a></p>
+          <p><a class="btn btn-primary" href="prod_phones.php">View all </a></p>
         </div><!-- /.col-lg-4 -->
         <div class="row">
           <hr class="featurette-divider">
@@ -152,7 +152,7 @@
             <h2>Televisions</h2>
             <p>
             </p><br>
-            <p><a class="btn btn-primary" href="index.php?page=prod_tv">View all </a></p>
+            <p><a class="btn btn-primary" href="prod_tv.php">View all </a></p>
           </div>
           <div class="col-lg-4">
             <img src="1604945711_IMG_1443405.jpg" class="img-fluid" width="100%">
@@ -166,7 +166,7 @@
             <h2>Laptops</h2>
             <p>
             </p><br>
-            <p><a class="btn btn-primary" href="index.php?page=prod_laptops">View all</a></p>
+            <p><a class="btn btn-primary" href="prod_laptops.php">View all</a></p>
           </div>
         </div><!-- /.row -->
 
@@ -257,9 +257,9 @@
 
   </div>
   <script src="BackToTop.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
 
 
 </body>

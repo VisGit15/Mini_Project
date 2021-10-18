@@ -39,24 +39,10 @@ $paginations = ceil($count / $per_page);
 <head>
   <meta charset="UTF-8">
   <title></title>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='bootstrap.min.css'>
   <link rel="stylesheet" href="style.css">
   <link href="searchbar.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ['Kalam']
-      }
-    });
-  </script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-
   <link rel="stylesheet" href="pagination.css">
 
 </head>
@@ -117,7 +103,7 @@ $paginations = ceil($count / $per_page);
   <!-- partial:index.partial.html -->
   <section class="light">
     <div class="container py-4">
-      <h1 class="headprod">TELEVISION</h1>
+      <h1 class="headprod">Televisions</h1>
       <!-- <h1 class="h1 text-center" id="pageHeaderTitle">My Cards Dark</h1> -->
       <?php foreach ($result as $data) : ?>
         <article class="postcard dark red">
@@ -172,7 +158,7 @@ $paginations = ceil($count / $per_page);
 
 
     <!-- FOOTER -->
-    <div class="container">
+<div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">
         <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
@@ -186,17 +172,19 @@ $paginations = ceil($count / $per_page);
     </footer>
   </div>
 
-  <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;">TOP</button>
-
-
+  
+ <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;"><svg
+      xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill"
+      viewBox="0 0 16 16">
+      <path
+        d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+    </svg></button>
 
   <script src="BackToTop.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src="pagination.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
   
 </body>
-
 </html>
 
 <!-- <nav aria-label="Page navigation example">
