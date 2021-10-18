@@ -1,11 +1,10 @@
 <?php 
 require 'config.php';
-$stmt = $pdo->prepare("SELECT * FROM users where id =". $_SESSION["id"]);
+$stmt = $pdo->prepare("SELECT * FROM users where id =". $_SESSION["id"] );
 $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,19 +30,19 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptops</a>
+            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptop</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphones</a>
+            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphone</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_tv.php">Televisions</a>
+            <a class="nav-link active" aria-current="page" href="prod_tv.php">Television</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphones</a>
+            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphone</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Cameras</a>
+            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Camera</a>
           </li>
 
         </ul>
@@ -54,16 +53,14 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="profile.php">
-              <span class="material-icons md-18"  placeholder="profile">account_circle</span></a>
+            <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="login.php">
-            <span class="material-icons md-18"  placeholder="login">login</span></a>
+            <a class="nav-link active" aria-current="page" href="login.php">Login/Signup</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"><span
-                class="material-icons md-18">shopping_cart</span></a>
+                class="material-icons">shopping_cart</span></a>
           </li>
         </ul>
       </div>

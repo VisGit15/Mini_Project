@@ -50,19 +50,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptop</a>
+            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptops</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphone</a>
+            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphones</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_tv.php">Television</a>
+            <a class="nav-link active" aria-current="page" href="prod_tv.php">Televisions</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphone</a>
+            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphones</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Camera</a>
+            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Cameras</a>
           </li>
 
         </ul>
@@ -73,7 +73,7 @@
         
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="profile.php">
+            <a class="nav-link active" aria-current="page" href="index.php?page=profile">
             <span class="material-icons md-18">account_circle</span></a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
