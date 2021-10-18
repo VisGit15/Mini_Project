@@ -108,12 +108,12 @@
         <h1 class="headprod">Headphones</h1>
         <!-- <h1 class="h1 text-center" id="pageHeaderTitle">My Cards Dark</h1> -->
 <?php foreach($result as $data) : ?>
-        <article class="postcard dark red">
+        <article class="postcard dark red geeks">
             <a class="postcard__img_link" href="index.php?page=product&product_id=<?=$data['product_id']?>">
                 <img class="postcard__img" src="Images/<?=$data['image_link']?>" alt="<?=$data['product_id']?>">   
             </a>
             <div class="postcard__text">
-                <br><h1 class="postcard__title red"><a href="index.php?page=product&product_id=<?=$data['product_id']?>"><?php echo $data['name']; ?></a></h1><br>
+                <br><h1 class="postcard__title red "><a href="index.php?page=product&product_id=<?=$data['product_id']?>"><?php echo $data['name']; ?></a></h1><br>
                 <div><h4>Price : &#8377;<?php echo $data['sale_price'];  ?></h4></div>
                 <div><h6>MRP : <strike>&#8377;<?php echo $data['mrp_price'];  ?></strike></h6></div><br>
                 <div><h6><?php echo $data['features-1'];  ?></h6></div> <br>

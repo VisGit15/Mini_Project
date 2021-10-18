@@ -39,6 +39,7 @@
 <link href="searchbar.css" rel="stylesheet">
 <link rel="stylesheet" href="pagination.css">
 </head>
+
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -92,13 +93,13 @@
   <br><br>
 
   
-<section class="light">
-    <div class="container py-4">
+<section class="light ">
+    <div class="container py-4 ">
         <h1 class="headprod">Laptops</h1>
 <?php foreach($result as $data) : ?>
-        <article class="postcard dark red">
-            <a class="postcard__img_link" href="index.php?page=product&product_id=<?=$data['product_id']?>">
-                <img class="postcard__img" src="Images/<?=$data['image_link']?>" alt="<?php echo $data['name']; ?>">   
+        <article class="postcard dark red geeks">
+            <a class="postcard__img_link " href="index.php?page=product&product_id=<?=$data['product_id']?>">
+                <img class="postcard__img " src="Images/<?=$data['image_link']?>" alt="<?php echo $data['name']; ?>">   
             </a>
             <div class="postcard__text">
                 <br><h1 class="postcard__title red"><a href="index.php?page=product&product_id=<?=$data['product_id']?>"><?php echo $data['name']; ?></a></h1><br>            

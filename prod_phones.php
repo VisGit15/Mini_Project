@@ -105,7 +105,7 @@
         <h1 class="headprod">Smart Phones</h1>
         <!-- <h1 class="h1 text-center" id="pageHeaderTitle">My Cards Dark</h1> -->
 <?php foreach($result as $data) : ?>
-        <article class="postcard dark red">
+        <article class="postcard dark red geeks">
             <a class="postcard__img_link" href="index.php?page=product&product_id=<?=$data['product_id']?>">
                 <img class="postcard__img" src="Images/<?=$data['image_link']?>" alt="<?=$data['product_id']?>">   
             </a>
