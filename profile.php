@@ -8,8 +8,8 @@
   <title>Document</title>
   <link href="bootstrap.min.css" rel="stylesheet">
   <link href="searchbar.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css"> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="profile.css">
 </head>
@@ -25,19 +25,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptop</a>
+            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptops</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphone</a>
+            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphones</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_tv.php">Television</a>
+            <a class="nav-link active" aria-current="page" href="prod_tv.php">Televisions</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphone</a>
+            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphones</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Camera</a>
+            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Cameras</a>
           </li>
 
         </ul>
@@ -48,14 +48,16 @@
         
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
+            <a class="nav-link active" aria-current="page" href="profile.php">
+              <span class="material-icons md-18"  placeholder="profile">account_circle</span></a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="login.php">Login/Signup</a>
+            <a class="nav-link active" aria-current="page" href="login.php">
+            <span class="material-icons md-18"  placeholder="login">login</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"><span
-                class="material-icons">shopping_cart</span></a>
+                class="material-icons md-18">shopping_cart</span></a>
           </li>
         </ul>
       </div>

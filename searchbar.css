@@ -28,9 +28,12 @@
 		color: black;
 	} */
 
-	/* body {
-		background: #eeeeee;
-	} */
+	body {
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	.material-icons.md-18 { font-size: 20px; }
+
 	.headprod{
 		color: black;
 		font-size: 50px;
@@ -47,6 +50,7 @@
 		padding-right: 16px;
 		/*border-bottom: 1px solid #ffffff;*/
 		box-shadow: 0 0 4px rgba(235, 222, 222, 0.1);
+		
 	}
 
 	.nav-link img {
@@ -62,7 +66,7 @@
 		padding-left: 0;
 		padding-right: 0px;
 		font-weight: 520;
-		font-family: 'Merienda One', sans-serif;
+		/* font-family: 'Merienda One', sans-serif; */
 	}
 	.navbar .navbar-brand i {
 		font-size: 20px;

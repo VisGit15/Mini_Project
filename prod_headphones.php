@@ -80,14 +80,16 @@
         
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="profile.php">Profile</a>
+            <a class="nav-link active" aria-current="page" href="profile.php">
+            <span class="material-icons md-18">account_circle</span></a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="login.php">Login/Signup</a>
+            <a class="nav-link active" aria-current="page" href="login.php">
+            <span class="material-icons md-18">login</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#"><span
-                class="material-icons">shopping_cart</span></a>
+                class="material-icons md-18">shopping_cart</span></a>
           </li>
         </ul>
       </div>
@@ -172,10 +174,10 @@
     </svg></button>
 
   <script src="BackToTop.js"></script>
-  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
-      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script> -->
+    crossorigin="anonymous"></script>
 </body>
 </html>
 
