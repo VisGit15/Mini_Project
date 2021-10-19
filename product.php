@@ -26,60 +26,71 @@ if (isset($_GET['product_id'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> -->
     <link rel="stylesheet" href="styleprod.css">
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href="searchbar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+</style>
     
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.php">Electronics Store</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  All Categories
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="index.php?page=prod_phones">Smartphones</a></li>
-                  <li><a class="dropdown-item" href="index.php?page=prod_laptops">Laptops</a></li>
-                  <li><a class="dropdown-item" href="index.php?page=prod_tv">Televisions</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            <div class="btn-group dropdown ml" role="group" aria-label="Button group with nested dropdown" >
-              <div class="btn-group" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn btn-outline-Secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="margin-left: 20px;">
-             Profile
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-              <li><a class="dropdown-item" href="index.php?page=login">Login/Sign Up</a></li>
-              <li><a class="dropdown-item" href="index.php?page=profile">My Account</a></li>
-            </ul>
-            </div>
-          <button type="button" class="btn btn-">Cart</button>
-          <button type="button" class="btn btn-">Orders</button>
-          </div>
-          </div>
-          </div>
-        </div>
-      </nav>
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid" >
+      <a class="navbar-brand" href="index.php">Electronics Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_laptops.php">Laptops</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_phones.php">Smartphones</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_tv.php">Televisions</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_headphones.php">Headphones</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Cameras</a>
+          </li>
 
-      <br><br>
+        </ul>
+        <form class="d-flex" action ="searchout.php" style="margin-right: 5%;margin-left: 20%;">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        
+
+        <!-- <li><p>Welcome back, <?=$_SESSION['username']?>!</p></li> -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="index.php?page=profile">
+              <span class="material-icons md-18">account_circle</span></a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="login.php">
+            <span class="material-icons md-18">login</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="shopping_cart.php">
+              <span class="material-icons md-18">shopping_cart</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <br><br>
     <div class="super_container" style="margin-left: 200px; background-color: #ffffff;">
         <header class="header" style="display: none;">
             <div class="header_main">
@@ -131,42 +142,28 @@ if (isset($_GET['product_id'])) {
                             <div class="row">
 
 
-<div class="product content-wrapper">
-    <img src="imgs/<?=$product['img']?>" width="500" height="500" alt="<?=$product['name']?>">
+<!-- <div class="product content-wrapper">
+ -->    <!-- <img src="imgs/<?=$product['img']?>" width="500" height="500" alt="<?=$product['name']?>"> -->
     <div>
-        <h1 class="name"><?=$product['name']?></h1>
-        <span class="price">
-            &dollar;<?=$product['sale_price']?>
+        <!-- <h1 class="name"><?=$product['name']?></h1> -->
+        <!-- span class="price">
+            &dollar;<?=$product['sale_price']?> -->
             <!-- <?php if ($product['rrp'] > 0): ?>
             <span class="rrp">&dollar;<?=$product['rrp']?></span>
             <?php endif; ?> -->
-        </span>
+        <!-- </span> -->
+        <br>
         <form action="index.php?page=cart" method="post">
             <input type="number" name="quantity" value="1" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
             <input type="hidden" name="product_id" value="<?=$product['product_id']?>">
             <input type="submit" value="Add To Cart">
         </form>
+        <br>
 <!--         <div class="description">
             <?=$product['description']?>
         </div> -->
     </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- </div> -->
 
                 <div class="row row-underline">
                     <div class="col-md-6"> <span class=" deal-text">Specifications</span> </div>
@@ -224,8 +221,8 @@ if (isset($_GET['product_id'])) {
             </div>
         </div>
     </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="BackToTop.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
