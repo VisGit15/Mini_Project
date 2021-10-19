@@ -1,10 +1,10 @@
-<?php 
+<?php
     require 'config.php';
     $start = 0;  $per_page = 4;
     $page_counter = 0;
     $next = $page_counter + 1;
     $previous = $page_counter - 1;
-    
+
     if(isset($_GET['start']))
     {
      $start = $_GET['start'];
@@ -71,7 +71,7 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-        
+
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
             <a class="nav-link active" aria-current="page" href="index.php?page=profile">
@@ -92,21 +92,21 @@
   </nav>
   <br><br>
 
-  
+
 <section class="light ">
     <div class="container py-4 ">
         <h1 class="headprod">Laptops</h1>
 <?php foreach($result as $data) : ?>
         <article class="postcard dark red geeks">
             <a class="postcard__img_link " href="index.php?page=product&product_id=<?=$data['product_id']?>">
-                <img class="postcard__img " src="Images/<?=$data['image_link']?>" alt="<?php echo $data['name']; ?>">   
+                <img class="postcard__img " src="Images/<?=$data['image_link']?>" alt="<?php echo $data['name']; ?>">
             </a>
             <div class="postcard__text">
-                <br><h1 class="postcard__title red"><a href="index.php?page=product&product_id=<?=$data['product_id']?>"><?php echo $data['name']; ?></a></h1><br>            
+                <br><h1 class="postcard__title red"><a href="index.php?page=product&product_id=<?=$data['product_id']?>"><?php echo $data['name']; ?></a></h1><br>
                 <div><h4>Price : &#8377;<?php echo $data['sale_price'];  ?></h4></div>
                 <div><h6>MRP : <strike>&#8377;<?php echo $data['mrp_price'];  ?></strike></h6></div><br>
-                <div><h6>RAM : <?php echo $data['ram'];  ?></h6></div> <br>
-                <div><h6>DISPLAY SIZE : <?php echo $data['cpu'];  ?>inches</h6></div>   
+                <div><h6>Ram : <?php echo $data['ram'];  ?></h6></div> <br>
+                <div><h6>Processor : <?php echo $data['cpu'];  ?></h6></div>   
                 <br>
             </div>
         </article>
@@ -119,20 +119,20 @@
 <?php
                 if($page_counter == 0){
                     echo "<li><a href=?start='0' class='page-link'>0</a></li>";
-                    for($j=1; $j < $paginations; $j++) { 
+                    for($j=1; $j < $paginations; $j++) {
                       echo "<li><a class='page-link' href=?start=$j>".$j."</a></li>";
                    }
                 }else{
-                    echo "<li><a class='page-link' href=?start=$previous>Previous</a></li>"; 
+                    echo "<li><a class='page-link' href=?start=$previous>Previous</a></li>";
                     for($j=0; $j < $paginations; $j++) {
                      if($j == $page_counter) {
                         echo "<li><a href=?start=$j class='page-link'>".$j."</a></li>";
                      }else{
                         echo "<li><a class='page-link' href=?start=$j>".$j."</a></li>";
-                     } 
+                     }
                   }if($j != $page_counter+1)
-                    echo "<li><a class='page-link' href=?start=$next>Next</a></li>"; 
-                } 
+                    echo "<li><a class='page-link' href=?start=$next>Next</a></li>";
+                }
             ?>
   </ul>
 </nav>
@@ -150,7 +150,7 @@
     </footer>
   </div>
 
-  
+
  <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;"><svg
       xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill"
       viewBox="0 0 16 16">
