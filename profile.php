@@ -23,7 +23,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">Electronics Store</a>
+      <a class="navbar-brand" href="index.php"><img src="Images/eletronics_stores.png" style="max-width:15rem;"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -49,14 +49,14 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <a class="nav-link active" aria-current="page" href="prod_cameras.php">Consoles</a>
           </li>
           <li class="nav-item" style="margin-right: 2%;">
-            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Smart Watches</a>
+            <a class="nav-link active" aria-current="page" href="prod_cameras.php">SmartWatches</a>
           </li>
 
         </ul>
-        <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
+        <!-- <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form> -->
 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
@@ -109,12 +109,12 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <div class="row mt-3">
             <div class="col-md-12"><label class="labels">Pincode</label><input disabled type="text" class="form-control" placeholder="Enter Pincode" value="<?php echo $user['pincode'] ?>"></div>
           </div>
-          <div class="row mt-3">
+          <!-- <div class="row mt-3">
             <div class="col-md-12"><label class="labels">State</label><input disabled type="text" class="form-control" placeholder="Enter State" value=""></div>
           </div>
           <div class="row mt-3">
             <div class="col-md-12"><label class="labels">Country</label><input disabled type="text" class="form-control" placeholder="Enter Country" value=""></div>
-          </div>
+          </div> -->
           <!-- <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"><a href="index.php">Save Profile</a></button></div> -->
         </div>
       </div>
@@ -130,6 +130,9 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </div>
 
   <!-- FOOTER -->
+  <br>
+  <br>
+  <br>
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <div class="col-md-4 d-flex align-items-center">

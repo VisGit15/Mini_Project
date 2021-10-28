@@ -20,7 +20,7 @@
 
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid" >
-      <a class="navbar-brand" href="index.php">Electronics Store</a>
+      <a class="navbar-brand" href="index.php"><img src="Images/eletronics_stores.png" style="max-width:15rem;"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -115,11 +115,11 @@
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="5000">
-          <img src="proart studio.jpeg" class="d-block w-100" alt="...">
+          <img src="mac2021.jpg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <a href="index.php">
-            <h3>ASUS ProArt Studiobook 16 OLED</h3>
-            <p>Born for Creative Pros</p>
+            <h3>MacBook Pro</h3>
+            <p>Supercharged for Pros</p>
           </a>
           </div>
         </div>
@@ -197,14 +197,14 @@
         <hr class="featurette-divider">
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Apple iPhone 13
+            <h2 class="featurette-heading">Apple iPhone 13 Pro Max
             </h2>
             <p class="lead">
-            <h3>Your new superpower.<h3>
+            <h3>Oh.So.Pro<h3>
                 </p><br>
                 <p>Chipset : Apple A15 Bionic (5 nm)</p>
-                <p>Display : Super Retina XDR OLED 6.1 inches</p>
-                <p>Internal : 128GB 4GB RAM, 256GB 4GB RAM, 512GB 4GB RAM</p>
+                <p>Display : Super Retina XDR OLED 6.7 inches</p>
+                <p>Internal : 128GB 6GB RAM, 256GB 6GB RAM, 1TB 6GB RAM</p>
           </div>
           <div class="col-md-5">
             <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
