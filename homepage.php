@@ -66,6 +66,10 @@
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.php?page=testcart">
+              <!-- <i class="fas fa-shopping-cart"></i>
+              <span><?$num_items_in_cart?></span>
+              <?php $num_items_in_cart = isset($_SESSION['testcart']) ? count($_SESSION['testcart']) : 0;?> -->
+
               <span class="material-icons md-18">shopping_cart</span></a>
           </li>
         </ul>
@@ -94,7 +98,7 @@
           <img src="51111308992_5d4ecdcc96_o.jpg" class="d-block w-100"
             alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <a href = "index.php">
+            <a href = "index.php?page=product&product_id=231643">
             <h3 style="color: black;">SONY PLAYSTATION 5</h3>
             <p style="color: black;">PLAY HAS NO LIMITS</p>
           </a>

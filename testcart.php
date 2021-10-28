@@ -55,8 +55,14 @@ if (isset($_POST['update']) && isset($_SESSION['testcart'])) {
 // Send the user to the place order page if they click the Place Order button, also the cart should not be empty
 if (isset($_POST['placeorder']) && isset($_SESSION['testcart']) && !empty($_SESSION['testcart'])) {
     header('Location: index.php?page=placeorder');
+    unset($_SESSION['testcart']);
+    session_destroy();
+
     exit;
+
 }
+
+
 // Check the session variable for products in cart
 $products_in_cart = isset($_SESSION['testcart']) ? $_SESSION['testcart'] : array();
 $products = array();
@@ -119,6 +125,12 @@ if ($products_in_cart) {
           </li>
           <li class="nav-item" style="margin-right: 2%;">
             <a class="nav-link active" aria-current="page" href="prod_cameras.php">Cameras</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_consoles.php">Consoles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="prod_watches.php">SmartWatches</a>
           </li>
 
         </ul>
