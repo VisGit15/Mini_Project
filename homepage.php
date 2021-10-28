@@ -90,15 +90,15 @@
           aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
           aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-          aria-label="Slide 3"></button>
+        <!-- <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button> -->
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="5000">
           <img src="51111308992_5d4ecdcc96_o.jpg" class="d-block w-100"
             alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <a href = "index.php?page=product&product_id=231643">
+            <a href = "index.php?page=product&product_id=231643" style="text-decoration: solid;">
             <h3 style="color: black;">SONY PLAYSTATION 5</h3>
             <p style="color: black;">PLAY HAS NO LIMITS</p>
           </a>
@@ -108,21 +108,21 @@
           <img src="anh-nhat-UkBwaZEhPFo-unsplash.jpg"
             class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <a href="index.php?page=product&product_id=mp000000008567288">
-            <h3>Samsung Galaxy S21</h3>
-            <p>Epic. In every way</p>
+            <a href="index.php?page=product&product_id=mp000000008567288" style="text-decoration: solid;">
+            <h3 style="color: white;">Samsung Galaxy S21</h3>
+            <p style="color: white;">Epic. In every way</p>
           </a>
           </div>
         </div>
-        <div class="carousel-item" data-bs-interval="5000">
-          <img src="mac2021.jpg" class="d-block w-100" alt="...">
+        <!-- <div class="carousel-item" data-bs-interval="5000">
+          <img src="h732.png" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
-            <a href="index.php">
-            <h3>MacBook Pro</h3>
-            <p>Supercharged for Pros</p>
+            <a href="index.php" style="text-decoration: solid;">
+            <h3 style="color: black;">MacBook Pro</h3>
+            <p style="color: black;">Supercharged for Pros</p>
           </a>
           </div>
-        </div>
+        </div> -->
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
         data-bs-slide="prev">
@@ -153,7 +153,7 @@
           <br>
           <br>
           <br>
-          <img src="71L1PbXlVpL._SL1500_.jpg" class="img-fluid" width="97%">
+          <img src="71L1PbXlVpL.SL1500.jpg" class="img-fluid" width="97%">
           <h2>Cameras</h2>
           <p>
           </p><br>
@@ -180,7 +180,7 @@
             <h2>Gaming Consoles</h2>
             <p>
             </p><br>
-            <p><a class="btn btn-primary" href="#">View all </a></p>
+            <p><a class="btn btn-primary" href="prod_consoles.php">View all </a></p>
           </div><!-- /.col-lg-4 -->
           <div class="col-lg-4">
             <img src="1612546281_IMG_1484400.jpg" class="img-fluid" width="100%">
@@ -197,24 +197,23 @@
         <hr class="featurette-divider">
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Apple iPhone 13 Pro Max
-            </h2>
+            <h2 class="featurette-heading">Apple iPhone 13 Mini</h2>
             <p class="lead">
             <h3>Oh.So.Pro<h3>
                 </p><br>
                 <p>Chipset : Apple A15 Bionic (5 nm)</p>
-                <p>Display : Super Retina XDR OLED 6.7 inches</p>
-                <p>Internal : 128GB 6GB RAM, 256GB 6GB RAM, 1TB 6GB RAM</p>
+                <p>Display : Super Retina XDR OLED 6.1 inches</p>
+                <p>Internal : 512 GB 4GB RAM</p>
           </div>
           <div class="col-md-5">
             <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
               height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
               preserveAspectRatio="xMidYMid slice" focusable="false">
-              <image href="71X6mnUDSzL._SL1500_.jpg" width="100%" class="img-fluid" />
+              <image href="71X6mnUDSzL.SL1500.jpg" width="100%" class="img-fluid" />
               <title>Placeholder</title><!-- <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text> -->
             </svg>
-            <form action="iphone13.php">
-              <button class="btn btn-primary" > PRE-ORDER </button>
+            <form action="index.php?page=product&product_id=mp000000010632193" method="POST">
+              <button class="btn btn-primary" > BUY NOW </button>
             </form>
 
           </div>
@@ -286,13 +285,3 @@
 </body>
 
 </html>
-
-<!-- Home Page
-     Login/Signup/Signout Page
-     Cart Page
-     Profile Page
-     Product Page
-     Product Listing
-     Orders Page
-     Contact Us Page
-     Wish List Page -->
