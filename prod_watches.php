@@ -119,8 +119,8 @@
                 <br><h1 class="postcard__title red"><a href="index.php?page=product&product_id=<?=$data['product_id']?>"><?php echo $data['name']; ?></a></h1><br>
                 <div><h4>Price : &#8377;<?php echo $data['sale_price'];  ?></h4></div>
                 <div><h6>MRP : <strike>&#8377;<?php echo $data['mrp_price'];  ?></strike></h6></div><br>
-                <div><h6>Ram : <?php echo $data['ram'];  ?>GB</h6></div> <br>
-                <div><h6>Internal Storage : <?php echo $data['internal_storage'];  ?>GB</h6></div>
+                <div><h6><?php echo $data['features-1'];  ?></h6></div> <br>
+                <div><h6><?php echo $data['features-2'];  ?></h6></div>
                 <br>
             </div>
         </article>

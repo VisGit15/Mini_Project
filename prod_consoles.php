@@ -120,7 +120,7 @@
                 <div><h4>Price : &#8377;<?php echo $data['sale_price'];  ?></h4></div>
                 <div><h6>MRP : <strike>&#8377;<?php echo $data['mrp_price'];  ?></strike></h6></div><br>
                 <div><h6>Ram : <?php echo $data['ram'];  ?>GB</h6></div> <br>
-                <div><h6>Internal Storage : <?php echo $data['internal_storage'];  ?>GB</h6></div>
+                <div><h6>Internal Storage : <?php echo $data['hdd'];  ?></h6></div>
                 <br>
             </div>
         </article>

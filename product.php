@@ -601,14 +601,14 @@ if (isset($_GET['product_id'])) {
                         </ul>
                     </td>
                 </tr>
-                <tr class="row mt-10">
+                <!-- <tr class="row mt-10">
                     <td class="col-md-4"><span class="p_specification"></span> </td>
                     <td class="col-md-8">
                         <ul>
                             <li><?= $product['features-3'] ?></li>
                         </ul>
                     </td>
-                </tr>
+                </tr> -->
 
             </tbody>
         </table>
