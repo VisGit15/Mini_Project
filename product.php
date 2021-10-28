@@ -78,7 +78,7 @@ if (isset($_GET['product_id'])) {
 
 
                 <!-- <li><p>Welcome back, <?= $_SESSION['username'] ?>!</p></li> -->
-                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item" style="margin-right: 10%;">
                         <a class="nav-link active" aria-current="page" href="index.php?page=profile">
                             <span class="material-icons md-18">account_circle</span></a>
