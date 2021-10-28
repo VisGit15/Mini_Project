@@ -4,13 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello, world!</title>
+  <title>Home Page</title>
   <link href="bootstrap.min.css" rel="stylesheet">
   <link href="carousel.css" rel="stylesheet">
   <link href="searchbar.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-    crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -23,7 +20,7 @@
 
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid" >
-      <a class="navbar-brand" href="homepage.php">Electronics Store</a>
+      <a class="navbar-brand" href="index.php">Electronics Store</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -53,10 +50,10 @@
           </li>
 
         </ul>
-        <form class="d-flex" style="margin-right: 5%;">
+        <!-- <form class="d-flex" style="margin-right: 5%;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form> -->
 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
@@ -97,23 +94,29 @@
           <img src="51111308992_5d4ecdcc96_o.jpg" class="d-block w-100"
             alt="...">
           <div class="carousel-caption d-none d-md-block">
+            <a href = "index.php">
             <h3 style="color: black;">SONY PLAYSTATION 5</h3>
             <p style="color: black;">PLAY HAS NO LIMITS</p>
+          </a>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="5000">
           <img src="anh-nhat-UkBwaZEhPFo-unsplash.jpg"
             class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
+            <a href="index.php?page=product&product_id=mp000000008567288">
             <h3>Samsung Galaxy S21</h3>
             <p>Epic. In every way</p>
+          </a>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="5000">
           <img src="proart studio.jpeg" class="d-block w-100" alt="...">
           <div class="carousel-caption d-none d-md-block">
+            <a href="index.php">
             <h3>ASUS ProArt Studiobook 16 OLED</h3>
             <p>Born for Creative Pros</p>
+          </a>
           </div>
         </div>
       </div>
@@ -271,7 +274,9 @@
 
   </div>
   <script src="BackToTop.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
 
 
 </body>

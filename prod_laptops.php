@@ -65,6 +65,12 @@
           <li class="nav-item" style="margin-right: 2%;">
             <a class="nav-link active" aria-current="page" href="prod_cameras.php">Cameras</a>
           </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_consoles.php">Consoles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="prod_watches.php">SmartWatches</a>
+          </li>
 
         </ul>
         <!-- <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">

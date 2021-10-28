@@ -15,8 +15,8 @@
      $previous = $page_counter - 1;
     }
     // query to get messages from messages table
-    $prod_headph = 'Head Phones';
-    $q = "SELECT * FROM prod_cat where category = '$prod_headph' LIMIT $start, $per_page";
+    $prod_console = 'Consoles';
+    $q = "SELECT * FROM prod_cat where category = '$prod_console' LIMIT $start, $per_page";
     $query = $pdo->prepare($q);
     $query->execute();
 
@@ -24,7 +24,7 @@
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
     }
     // count total number of rows in laptops table
-    $count_query = "SELECT * FROM prod_cat where category = '$prod_headph'";
+    $count_query = "SELECT * FROM prod_cat where category = '$prod_console'";
     $query = $pdo->prepare($count_query);
     $query->execute();
     $count = $query->rowCount();
@@ -38,12 +38,10 @@
   <meta charset="UTF-8">
   <title></title>
 <link rel='stylesheet' href='bootstrap.min.css'>
-<link rel="stylesheet" href="style.css"><!--Navbar fonts in this file -->
+<link rel="stylesheet" href="style.css">
 <link href="searchbar.css" rel="stylesheet">
-<link rel="stylesheet" href="pagination.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
+<link rel="stylesheet" href="pagination.css">
 
 </head>
 <body>
@@ -71,13 +69,13 @@
           <li class="nav-item" style="margin-right: 2%;">
             <a class="nav-link active" aria-current="page" href="prod_cameras.php">Cameras</a>
           </li>
-
           <li class="nav-item" style="margin-right: 2%;">
             <a class="nav-link active" aria-current="page" href="prod_consoles.php">Consoles</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="prod_watches.php">SmartWatches</a>
           </li>
+
         </ul>
         <!-- <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -107,11 +105,10 @@
 
 
 
-
 <!-- partial:index.partial.html -->
 <section class="light">
     <div class="container py-4">
-        <h1 class="headprod">Headphones</h1>
+        <h1 class="headprod">Gaming Consoles</h1>
         <!-- <h1 class="h1 text-center" id="pageHeaderTitle">My Cards Dark</h1> -->
 <?php foreach($result as $data) : ?>
         <article class="postcard dark red geeks">
@@ -119,11 +116,11 @@
                 <img class="postcard__img" src="Images/<?=$data['image_link']?>" alt="<?=$data['product_id']?>">
             </a>
             <div class="postcard__text">
-                <br><h1 class="postcard__title red "><a href="index.php?page=product&product_id=<?=$data['product_id']?>"><?php echo $data['name']; ?></a></h1><br>
+                <br><h1 class="postcard__title red"><a href="index.php?page=product&product_id=<?=$data['product_id']?>"><?php echo $data['name']; ?></a></h1><br>
                 <div><h4>Price : &#8377;<?php echo $data['sale_price'];  ?></h4></div>
                 <div><h6>MRP : <strike>&#8377;<?php echo $data['mrp_price'];  ?></strike></h6></div><br>
-                <div><h6><?php echo $data['features-1'];  ?></h6></div> <br>
-                <div><h6><?php echo $data['features-2'];  ?></h6></div>
+                <div><h6>Ram : <?php echo $data['ram'];  ?>GB</h6></div> <br>
+                <div><h6>Internal Storage : <?php echo $data['internal_storage'];  ?>GB</h6></div>
                 <br>
             </div>
         </article>
@@ -155,7 +152,6 @@
 </nav>
 
 
-
   <!-- FOOTER -->
   <div class="container">
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -180,7 +176,8 @@
     </svg></button>
 
   <script src="BackToTop.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="pagination.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
