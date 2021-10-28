@@ -74,11 +74,11 @@ $paginations = ceil($count / $per_page);
           </li>
 
         </ul>
-        <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
+        <!-- <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        
+        </form> -->
+
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
             <a class="nav-link active" aria-current="page" href="index.php?page=profile">
@@ -89,7 +89,7 @@ $paginations = ceil($count / $per_page);
             <span class="material-icons md-18">login</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><span
+            <a class="nav-link active" aria-current="page" href="index.php?page=testcart"><span
                 class="material-icons md-18">shopping_cart</span></a>
           </li>
         </ul>
@@ -174,7 +174,7 @@ $paginations = ceil($count / $per_page);
     </footer>
   </div>
 
-  
+
  <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;"><svg
       xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill"
       viewBox="0 0 16 16">
@@ -185,7 +185,7 @@ $paginations = ceil($count / $per_page);
   <script src="BackToTop.js"></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-  
+
 </body>
 </html>
 

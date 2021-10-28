@@ -2,7 +2,6 @@
 // Check to make sure the id parameter is specified in the URL
 if (isset($_GET['product_id'])) {
     // Prepare statement and execute, prevents SQL injection
-    $prod_lap = "laptops";
     $stmt = $pdo->prepare("SELECT * FROM prod_cat where product_id = ?");
     $stmt->execute([$_GET['product_id']]);
     // Fetch the product from the database and return the result as an Array
@@ -28,7 +27,7 @@ if (isset($_GET['product_id'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="styleprod.css">
     <link href="bootstrap.min.css" rel="stylesheet">
     <link href="searchbar.css" rel="stylesheet">
@@ -66,10 +65,10 @@ if (isset($_GET['product_id'])) {
                     </li>
 
                 </ul>
-                <form class="d-flex" action="searchout.php" style="margin-right: 5%;margin-left: 20%;">
+                <!-- <form class="d-flex" action="searchout.php" style="margin-right: 5%;margin-left: 20%;">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+                </form> -->
 
 
                 <!-- <li><p>Welcome back, <?= $_SESSION['username'] ?>!</p></li> -->
@@ -83,7 +82,7 @@ if (isset($_GET['product_id'])) {
                             <span class="material-icons md-18">login</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="shopping_cart.php">
+                        <a class="nav-link active" aria-current="page" href="index.php?page=testcart">
                             <span class="material-icons md-18">shopping_cart</span></a>
                     </li>
                 </ul>
@@ -156,15 +155,12 @@ if (isset($_GET['product_id'])) {
             <?php endif; ?> -->
                                     <!-- </span> -->
                                     <br>
-                                    <form action="index.php?page=cart" method="post">
+                                    <form action="index.php?page=testcart" method="post">
                                         <input type="number" name="quantity" value="1" min="1" max="<?= $product['quantity'] ?>" placeholder="Quantity" required>
                                         <input type="hidden" name="product_id" value="<?= $product['product_id'] ?>">
                                         <input type="submit" value="Add To Cart">
                                     </form>
                                     <br>
-                                    <!--         <div class="description">
-                                      <?= $product['description'] ?>
-                                      </div> -->
                                 </div>
                                 <!-- </div> -->
 
@@ -329,7 +325,7 @@ if (isset($_GET['product_id'])) {
                       <td class="col-md-4"><span class="p_specification"></span> </td>
                       <td class="col-md-8">
                           <ul>
-                              <li><?= $product['features-5'] ?></li>
+                              <li><?= $product['features-3'] ?></li>
                           </ul>
                       </td>
                   </tr>

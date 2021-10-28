@@ -347,7 +347,7 @@ if ($products_in_cart) {
                         <!-- <div class="col align-self-center text-right text-muted">3 items</div> -->
                     </div>
                 </div>
-                
+
                 <div class="row border-top border-bottom">
                     <div class="row main align-items-center">
                         <div class="col-2"><img class="img-fluid" src="Images/<?=$data['image_link']?>">
@@ -366,7 +366,7 @@ if ($products_in_cart) {
                         <div class="col">&euro; 44.00 <span class="close">&#10005;</span></div>
                     </div>
                 </div>
-                
+
                 <div class="row">
                 </div>
 

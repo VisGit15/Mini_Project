@@ -4,11 +4,14 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
-  color: #ffffff;
+  color: #000;
   text-rendering: optimizeLegibility;
   font-weight: initial;
-}
+  /* outline: 10px solid blue; */
 
+}
+*{
+}
 /* .dark {
   background: #110f16;
 } */
@@ -127,18 +130,18 @@ a, a:hover {
 }
 .postcard:hover .postcard__bar {
   width: 600px;
-  
-} 
+
+}
 
 .geeks {
   overflow: hidden;
   /* margin: 0 auto; */
 }
- 
+
 .geeks img {
   transition: 0.3s all ease-in-out;
 }
- 
+
 .geeks:hover img {
   transform: scale(1.1);
 }
@@ -188,7 +191,7 @@ a, a:hover {
     right: -12px !important;
     transform: rotate(-4deg);
   }
-} 
+}
  @media screen and (min-width: 1024px) {
   .postcard__text {
     padding: 2rem 3.5rem;
@@ -201,7 +204,7 @@ a, a:hover {
     top: -20%;
     height: 130%;
     width: 55px;
-  } 
+  }
 
    .postcard.dark .postcard__text:before {
     background: #f8f8f8;
@@ -209,9 +212,9 @@ a, a:hover {
 
   .postcard.light .postcard__text:before {
     background: #e1e5ea;
-  } 
+  }
 }
-COLORS 
+COLORS
 .postcard .postcard__tagbox .green.play:hover {
   background: #79dd09;
   color: black;
@@ -292,7 +295,7 @@ COLORS
 
 .yellow:nth-child(2n)::before {
   background-image: linear-gradient(30deg, rgba(189, 187, 73, 0.1), transparent 50%);
-} 
+}
 
 @media screen and (min-width: 769px) {
   .green::before {

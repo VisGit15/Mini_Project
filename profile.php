@@ -1,4 +1,4 @@
-<?php 
+<?php
 require 'config.php';
 $stmt = $pdo->prepare("SELECT * FROM users where id =". $_SESSION["id"]);
 $stmt->execute();
@@ -45,13 +45,19 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <li class="nav-item" style="margin-right: 2%;">
             <a class="nav-link active" aria-current="page" href="prod_cameras.php">Cameras</a>
           </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Consoles</a>
+          </li>
+          <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_cameras.php">Smart Watches</a>
+          </li>
 
         </ul>
         <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-        
+
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
             <a class="nav-link active" aria-current="page" href="profile.php">
@@ -75,7 +81,11 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <div class="row">
       <div class="col-md-3 border-right">
         <?php foreach ($users as $user) : ?>
-          <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold"><?php echo $user['username'] ?></span><span class="text-black-50"><?php echo $user['id'] ?></span><span> </span></div>
+          <!-- <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+            <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+            <span class="font-weight-bold"><?php echo $user['username'] ?></span>
+            <span class="text-black-50"><?php echo $user['id'] ?></span>
+            <span> </span></div> -->
         <?php endforeach; ?>
       </div>
       <div class="col-md-5">
@@ -84,24 +94,28 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <h4 class="text-right">Profile Settings</h4>
           </div>
           <div class="row mt-3">
-            <div class="col-md-12"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
-            <!-- <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div> -->
+            <div class="col-md-12"><label class="labels">Name</label><input disabled type="text" class="form-control" placeholder="Enter Name" value="<?php echo $user['username'] ?>"></div>
           </div>
           <div class="row mt-3">
-            <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
-            <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
-            <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-            <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-            <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
-            <!-- <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div> -->
-            <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
-            <!-- <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div> -->
-            <!-- </div>
-                <div class="row mt-3"> -->
-            <div class="col-md-12"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
-            <!-- <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div> -->
+            <div class="col-md-12"><label class="labels">Mobile Number</label><input disabled type="text" class="form-control" placeholder="Enter Phone Number" value="<?php echo $user['mobileno'] ?>"></div>
           </div>
-          <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"><a href="index.php">Save Profile</a></button></div>
+          <div class="row mt-3">
+            <div class="col-md-12"><label class="labels">Email ID</label><input disabled type="text" class="form-control" placeholder="Enter Email id" value="<?php echo $user['email'] ?>"></div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12"><label class="labels">Address</label><input disabled type="text" class="form-control" placeholder="Enter Address" value="<?php echo $user['address'] ?>"></div>
+            <!-- <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div> -->
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12"><label class="labels">Pincode</label><input disabled type="text" class="form-control" placeholder="Enter Pincode" value="<?php echo $user['pincode'] ?>"></div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12"><label class="labels">State</label><input disabled type="text" class="form-control" placeholder="Enter State" value=""></div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12"><label class="labels">Country</label><input disabled type="text" class="form-control" placeholder="Enter Country" value=""></div>
+          </div>
+          <!-- <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"><a href="index.php">Save Profile</a></button></div> -->
         </div>
       </div>
       <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;">TOP</button>

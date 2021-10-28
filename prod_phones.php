@@ -1,4 +1,4 @@
-<?php 
+<?php
     //include configuration file
     require 'config.php';
 
@@ -6,7 +6,7 @@
     $page_counter = 0;
     $next = $page_counter + 1;
     $previous = $page_counter - 1;
-    
+
     if(isset($_GET['start'])){
      $start = $_GET['start'];
      $page_counter =  $_GET['start'];
@@ -71,11 +71,11 @@
           </li>
 
         </ul>
-        <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
+        <!-- <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        
+        </form> -->
+
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
             <a class="nav-link active" aria-current="page" href="index.php?page=profile">
@@ -86,7 +86,7 @@
             <span class="material-icons md-18">login</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><span
+            <a class="nav-link active" aria-current="page" href="index.php?page=testcart"><span
                 class="material-icons md-18">shopping_cart</span></a>
           </li>
         </ul>
@@ -107,14 +107,14 @@
 <?php foreach($result as $data) : ?>
         <article class="postcard dark red geeks">
             <a class="postcard__img_link" href="index.php?page=product&product_id=<?=$data['product_id']?>">
-                <img class="postcard__img" src="Images/<?=$data['image_link']?>" alt="<?=$data['product_id']?>">   
+                <img class="postcard__img" src="Images/<?=$data['image_link']?>" alt="<?=$data['product_id']?>">
             </a>
             <div class="postcard__text">
                 <br><h1 class="postcard__title red"><a href="index.php?page=product&product_id=<?=$data['product_id']?>"><?php echo $data['name']; ?></a></h1><br>
                 <div><h4>Price : &#8377;<?php echo $data['sale_price'];  ?></h4></div>
                 <div><h6>MRP : <strike>&#8377;<?php echo $data['mrp_price'];  ?></strike></h6></div><br>
                 <div><h6>Ram : <?php echo $data['ram'];  ?>GB</h6></div> <br>
-                <div><h6>Internal Storage : <?php echo $data['internal_storage'];  ?>GB</h6></div>   
+                <div><h6>Internal Storage : <?php echo $data['internal_storage'];  ?>GB</h6></div>
                 <br>
             </div>
         </article>
@@ -127,20 +127,20 @@
 <?php
                 if($page_counter == 0){
                     echo "<li><a href=?start='0' class='page-link'>0</a></li>";
-                    for($j=1; $j < $paginations; $j++) { 
+                    for($j=1; $j < $paginations; $j++) {
                       echo "<li><a class='page-link' href=?start=$j>".$j."</a></li>";
                    }
                 }else{
-                    echo "<li><a class='page-link' href=?start=$previous>Previous</a></li>"; 
+                    echo "<li><a class='page-link' href=?start=$previous>Previous</a></li>";
                     for($j=0; $j < $paginations; $j++) {
                      if($j == $page_counter) {
                         echo "<li><a href=?start=$j class='page-link'>".$j."</a></li>";
                      }else{
                         echo "<li><a class='page-link' href=?start=$j>".$j."</a></li>";
-                     } 
+                     }
                   }if($j != $page_counter+1)
-                    echo "<li><a class='page-link' href=?start=$next>Next</a></li>"; 
-                } 
+                    echo "<li><a class='page-link' href=?start=$next>Next</a></li>";
+                }
             ?>
   </ul>
 </nav>
@@ -161,7 +161,7 @@
     </footer>
   </div>
 
-  
+
  <button onclick="topFunction()" id="myBtn" title="Go to top" style="width: min-content;"><svg
       xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-circle-fill"
       viewBox="0 0 16 16">
@@ -170,11 +170,10 @@
     </svg></button>
 
   <script src="BackToTop.js"></script>
-  
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="pagination.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
     crossorigin="anonymous"></script>
 </body>
 </html>
-

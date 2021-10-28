@@ -67,10 +67,10 @@
           </li>
 
         </ul>
-        <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
+        <!-- <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </form> -->
 
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item" style="margin-right: 2%;">
@@ -82,7 +82,7 @@
             <span class="material-icons md-18">login</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><span
+            <a class="nav-link active" aria-current="page" href="index.php?page=testcart"><span
                 class="material-icons md-18">shopping_cart</span></a>
           </li>
         </ul>
@@ -106,7 +106,7 @@
                 <div><h4>Price : &#8377;<?php echo $data['sale_price'];  ?></h4></div>
                 <div><h6>MRP : <strike>&#8377;<?php echo $data['mrp_price'];  ?></strike></h6></div><br>
                 <div><h6>Ram : <?php echo $data['ram'];  ?></h6></div> <br>
-                <div><h6>Processor : <?php echo $data['cpu'];  ?></h6></div>   
+                <div><h6>Processor : <?php echo $data['cpu'];  ?></h6></div>
                 <br>
             </div>
         </article>
