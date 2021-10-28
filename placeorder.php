@@ -1,3 +1,11 @@
+<?php
+require 'config.php';
+$stmt = $pdo->prepare("SELECT * FROM users where id =". $_SESSION["id"]);
+$stmt->execute();
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -66,13 +74,19 @@
   </div>
 </nav>
 <br><br>
-
+<?php foreach ($users as $user) : ?>
+  <!-- <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+    <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+    <span class="font-weight-bold"><?php echo $user['username'] ?></span>
+    <span class="text-black-50"><?php echo $user['id'] ?></span>
+    <span> </span></div> -->
+<?php endforeach; ?>
 <div>
   <br>
   <br>
   <br>
   <br>
-    <h1>Your Order Has Been Placed</h1>
+    <h1><?php echo $user['username'] ?></h1>
     <p>Thank you for ordering with us, we'll contact you by email with your order details.</p>
 </div>
 
