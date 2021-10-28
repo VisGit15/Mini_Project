@@ -172,7 +172,7 @@ if (isset($_GET['product_id'])) {
 
 
                                     <!-- laptops -->
-                                    <?php if ($product['category'] == "laptops") { ?>
+                                    <?php if ($product['category'] == "Laptops") { ?>
                                         <div class="row row-underline">
                                             <div class="col-md-6"> <span class=" deal-text">Specifications</span> </div>
                                             <div class="col-md-6"> <a href="#" data-abc="true"> <span class="ml-auto view-all"></span> </a> </div>
@@ -251,7 +251,7 @@ if (isset($_GET['product_id'])) {
                                                 </table>
                                             </div>
                                         </div>
-                                    <?php } elseif ($product['category'] == "camera") { ?>
+                                    <?php } elseif ($product['category'] == "Camera") { ?>
 
                                         <div class="row row-underline">
                                             <div class="col-md-6"> <span class=" deal-text">Specifications</span> </div>
@@ -340,7 +340,7 @@ if (isset($_GET['product_id'])) {
                                                 </table>
                                             </div>
                                         </div>
-                                    <?php } elseif ($product['category'] == "smartphones") { ?>
+                                    <?php } elseif ($product['category'] == "Smartphones") { ?>
 
                                         <div class="row row-underline">
                                             <div class="col-md-6"> <span class=" deal-text">Specifications</span> </div>
@@ -438,7 +438,10 @@ if (isset($_GET['product_id'])) {
                                             </div>
                                         </div>
                                     <?php } elseif ($product['category'] == "TV") { ?>
-
+                                        <div class="row row-underline">
+                                            <div class="col-md-6"> <span class=" deal-text">Specifications</span> </div>
+                                            <div class="col-md-6"> <a href="#" data-abc="true"> <span class="ml-auto view-all"></span> </a> </div>
+                                        </div>
                                         <!-- TV -->
                                         <div class="row">
                                             <div class="col-md-12">
@@ -481,7 +484,139 @@ if (isset($_GET['product_id'])) {
                                                 </table>
                                             </div>
                                         </div>
-                                    <?php } ?>
+                                        <?php } elseif ($product['category'] == "Consoles") { ?>
+
+<div class="row row-underline">
+    <div class="col-md-6"> <span class=" deal-text">Specifications</span> </div>
+    <div class="col-md-6"> <a href="#" data-abc="true"> <span class="ml-auto view-all"></span> </a> </div>
+</div>
+<!-- Head Phones -->
+<div class="row">
+    <div class="col-md-12">
+        <table class="col-md-12">
+            <tbody>
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification">Brand</span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['brand'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification">Extra Features</span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['features-1'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification"></span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['features-2'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification"></span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['features-3'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification"></span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['features-4'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification"></span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['features-3'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<?php } elseif ($product['category'] == "Smartwatches") { ?>
+
+<div class="row row-underline">
+    <div class="col-md-6"> <span class=" deal-text">Specifications</span> </div>
+    <div class="col-md-6"> <a href="#" data-abc="true"> <span class="ml-auto view-all"></span> </a> </div>
+</div>
+<!-- Head Phones -->
+<div class="row">
+    <div class="col-md-12">
+        <table class="col-md-12">
+            <tbody>
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification">Brand</span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['brand'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification">Extra Features</span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['features-1'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification"></span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['features-2'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification"></span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['features-3'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification"></span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['features-4'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr class="row mt-10">
+                    <td class="col-md-4"><span class="p_specification"></span> </td>
+                    <td class="col-md-8">
+                        <ul>
+                            <li><?= $product['features-3'] ?></li>
+                        </ul>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<?php }?>
+
+
 
                                 </div>
                             </div>
