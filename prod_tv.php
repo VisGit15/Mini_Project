@@ -38,7 +38,7 @@ $paginations = ceil($count / $per_page);
 
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Television</title>
   <link rel='stylesheet' href='bootstrap.min.css'>
   <link rel="stylesheet" href="style.css">
   <link href="searchbar.css" rel="stylesheet">

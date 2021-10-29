@@ -36,7 +36,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Camera</title>
 <link rel='stylesheet' href='bootstrap.min.css'>
 <link rel="stylesheet" href="style.css">
 <link href="searchbar.css" rel="stylesheet">

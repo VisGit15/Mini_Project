@@ -36,12 +36,13 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Smart Phones</title>
 <link rel='stylesheet' href='bootstrap.min.css'>
 <link rel="stylesheet" href="style.css">
 <link href="searchbar.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="pagination.css">
+
 
 </head>
 <body>

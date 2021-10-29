@@ -98,6 +98,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </style>
 </head>
 <body>
+    <img src="Images/eletronics_stores.png" alt="" style="max-width:20rem; display: block;margin-left: auto; margin-right: auto;width: 50%;">
     <div class="wrapper">
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>

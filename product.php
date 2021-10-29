@@ -25,6 +25,7 @@ if (isset($_GET['product_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><?= $product['name'] ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
@@ -133,11 +134,11 @@ if (isset($_GET['product_id'])) {
                     <div class="col-lg-6 order-3">
                         <div class="product_description">
                             <nav>
-                                <ol class="breadcrumb">
+                                <!-- <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php">Home</a></li>
                                     <li class="breadcrumb-item"><a href="index.php?page=prod_laptops"><?= $product['category'] ?></a></li>
                                     <li class="breadcrumb-item active"><?= $product['name'] ?></li>
-                                </ol>
+                                </ol> -->
                             </nav>
                             <div class="product_name"><?= $product['name'] ?></div><br>
                             <div> <span class="product_price">&#8377;<?= $product['sale_price'] ?></span> <strike class="product_discount"> <span style='color:black'>&#8377;<?php $save = $product['mrp_price'] - $product['sale_price'];
@@ -162,14 +163,14 @@ if (isset($_GET['product_id'])) {
                                         <!-- </span> -->
                                         <br>
                                         <form action="index.php?page=testcart" method="post">
-                                            <input type="number" name="quantity" value="1" min="1" max="<?= $product['quantity'] ?>" placeholder="Quantity" required>
+                                            <input type="number" name="quantity"   style="width: 74px;" value="1" min="1" max="<?= $product['quantity'] ?>" placeholder="Quantity" required>
                                             <input type="hidden" name="product_id" value="<?= $product['product_id'] ?>">
-                                            <input type="submit" value="Add To Cart">
+                                            <input type="submit" value="Add To Cart" class="btn btn-primary"  >
                                         </form>
                                         <br>
                                     </div>
                                     <!-- </div> -->
-
+                                  
 
                                     <!-- laptops -->
                                     <?php if ($product['category'] == "Laptops") { ?>

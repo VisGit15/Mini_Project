@@ -56,7 +56,6 @@ if (isset($_POST['update']) && isset($_SESSION['testcart'])) {
 if (isset($_POST['placeorder']) && isset($_SESSION['testcart']) && !empty($_SESSION['testcart'])) {
     header('Location: index.php?page=placeorder');
     unset($_SESSION['testcart']);
-    session_destroy();
 
     exit;
 
@@ -89,7 +88,7 @@ if ($products_in_cart) {
 <head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <title>Snippet - GoSNippets</title>
+    <title>Shopping Cart</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel='stylesheet'>
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel='stylesheet'>
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -185,12 +184,12 @@ if ($products_in_cart) {
                             <!-- <div class="row text-muted" style="display: inline"><?=$product['category']?></div> -->
                             <div class="row" style="display: inline;font-size: 25px;"><a href="index.php?page=product&product_id=<?=$product['product_id']?>"><?=$product['name']?></a></div>
                             <div class="row" style="display: inline;"><h5>Price : &#8377;<?=$product['sale_price']?></h5></div>
-                            <input type="number" name="quantity-<?=$product['product_id']?>" value="<?=$products_in_cart[$product['product_id']]?>" min="1" max="<?=$product['quantity']?>" placeholder="Quantity" required>
+                            <input type="number" style="width:74px" name="quantity-<?=$product['product_id']?>" value="<?=$products_in_cart[$product['product_id']]?>" min="1" max="<?=$product['quantity']?>"  placeholder="Quantity" required>
 
                             <div class="row" style="display: inline;"><h3>Total : &#8377;<?=$product['sale_price'] * $products_in_cart[$product['product_id']]?></h3></div>
                         </div>
                         <div class="col">
-                        <a href="index.php?page=testcart&remove=<?=$product['product_id']?>" class="remove" style="display: block;width: max-content;border: black 1px solid;margin-bottom: 1%;">Remove</a>
+                        <a href="index.php?page=testcart&remove=<?=$product['product_id']?>" class="remove btn btn-primary" class="" style="display: block;width: max-content;margin-bottom: 1%;">Remove</a>
 
 
                         <!-- <div class="col"> <a href="#">-</a><a href="#" class="border">1</a><a href="#">+</a> </div> -->
@@ -233,8 +232,8 @@ if ($products_in_cart) {
                 </div>
                 <br>
                 <div class="buttons">
-                    <input type="submit" value="Update" name="update" style="margin: 1vh;">
-                    <input type="submit" value="Place Order" name="placeorder" style="margin: 1vh;">
+                    <input type="submit" value="Update" name="update" style="margin: 1vh;" class="btn btn-primary" >
+                    <input type="submit" value="Place Order" name="placeorder" style="margin: 1vh;" class="btn btn-primary" >
                 </div>
                 </form>
                 <br>

@@ -1,6 +1,6 @@
 <?php
 require 'config.php';
-$stmt = $pdo->prepare("SELECT * FROM users where id =". $_SESSION["id"]);
+$stmt = $pdo->prepare("SELECT * FROM users where id =" . $_SESSION["id"]);
 $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -13,19 +13,21 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Profile</title>
   <link href="bootstrap.min.css" rel="stylesheet">
   <link href="searchbar.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="profile.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+  </style>
 </head>
 
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.php"><img src="Images/eletronics_stores.png" style="max-width:15rem;"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -58,18 +60,17 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form> -->
 
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item" style="margin-right: 2%;">
+        <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+          <li class="nav-item" style="margin-right: 10%;">
             <a class="nav-link active" aria-current="page" href="profile.php">
-              <span class="material-icons md-18"  placeholder="profile">account_circle</span></a>
+              <span class="material-icons md-18" placeholder="profile">account_circle</span></a>
           </li>
-          <li class="nav-item" style="margin-right: 2%;">
+          <li class="nav-item" style="margin-right: 10%;">
             <a class="nav-link active" aria-current="page" href="login.php">
-            <span class="material-icons md-18"  placeholder="login">login</span></a>
+              <span class="material-icons md-18" placeholder="login">login</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><span
-                class="material-icons md-18">shopping_cart</span></a>
+            <a class="nav-link active" aria-current="page" href="testcart.php"><span class="material-icons md-18">shopping_cart</span></a>
           </li>
         </ul>
       </div>

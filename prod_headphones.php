@@ -36,7 +36,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title></title>
+  <title>Headphones</title>
 <link rel='stylesheet' href='bootstrap.min.css'>
 <link rel="stylesheet" href="style.css"><!--Navbar fonts in this file -->
 <link href="searchbar.css" rel="stylesheet">
