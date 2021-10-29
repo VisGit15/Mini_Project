@@ -32,7 +32,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Laptop</title>
+  <title>Laptops</title>
 <link href="bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="style.css">

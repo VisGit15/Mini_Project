@@ -95,7 +95,10 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <h4 class="text-right">Profile Settings</h4>
           </div>
           <div class="row mt-3">
-            <div class="col-md-12"><label class="labels">Name</label><input disabled type="text" class="form-control" placeholder="Enter Name" value="<?php echo $user['username'] ?>"></div>
+            <div class="col-md-12"><label class="labels">Name</label><input disabled type="text" class="form-control" placeholder="Enter Name" value="<?php echo $user['name'] ?>"></div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-12"><label class="labels">Username</label><input disabled type="text" class="form-control" placeholder="Enter Username" value="<?php echo $user['username'] ?>"></div>
           </div>
           <div class="row mt-3">
             <div class="col-md-12"><label class="labels">Mobile Number</label><input disabled type="text" class="form-control" placeholder="Enter Phone Number" value="<?php echo $user['mobileno'] ?>"></div>

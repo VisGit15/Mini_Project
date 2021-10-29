@@ -1,3 +1,12 @@
+<?php
+require 'config.php';
+$stmt = $pdo->prepare("SELECT * FROM users where id =". $_SESSION['id']);
+$stmt->execute();
+$users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,12 +15,12 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.87.0">
-    <title></title>
+    <title>Checkout</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
-    
 
-    
+
+
 
     <!-- Bootstrap core CSS -->
 <link href="bootstrap.min.css" rel="stylesheet">
@@ -32,22 +41,28 @@
       }
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <!-- <link rel="stylesheet" href="checkout.css"> -->
   </head>
   <body class="bg-light">
-    
 <div class="container" style="max-width: 960px;">
+  <?php foreach ($users as $user) : ?>
+    <!-- <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+      <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+      <span class="font-weight-bold"><?php echo $user['username'] ?></span>
+      <span class="text-black-50"><?php echo $user['id'] ?></span>
+      <span> </span></div> -->
+  <?php endforeach; ?>
   <main>
     <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="69.jpg" alt="" width="72" height="57">
-      <h2>Checkout form</h2>
-      <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+      <img class="d-block mx-auto mb-4" src="Images/eletronics_stores.png" style="max-width:20rem;" alt="">
+      <h2>Checkout</h2>
+      <!-- <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p> -->
     </div>
 
     <div class="row g-5">
-      <div class="col-md-5 col-lg-4 order-md-last">
+      <!-- <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-primary">Your cart</span>
           <span class="badge bg-primary rounded-pill">3</span>
@@ -56,7 +71,7 @@
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
               <h6 class="my-0">Product name</h6>
-              <small class="text-muted">Brief description</small>
+              <small class="text-muted"></small>
             </div>
             <span class="text-muted">$12</span>
           </li>
@@ -93,32 +108,26 @@
             <button type="submit" class="btn btn-secondary">Redeem</button>
           </div>
         </form>
-      </div>
+      </div> -->
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Billing address</h4>
         <form class="needs-validation" novalidate>
           <div class="row g-3">
-            <div class="col-sm-6">
-              <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+            <div class="col-12">
+              <label for="firstName" class="form-label">Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Name" value="<?php echo $user['name'] ?>" disabled required>
               <div class="invalid-feedback">
-                Valid first name is required.
+                Valid Name is required.
               </div>
             </div>
 
-            <div class="col-sm-6">
-              <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
+
 
             <div class="col-12">
               <label for="username" class="form-label">Username</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="Username" required>
+                <input type="text" class="form-control" id="username" placeholder="Username" value="<?php echo $user['username'] ?>" disabled required>
               <div class="invalid-feedback">
                   Your username is required.
                 </div>
@@ -126,8 +135,18 @@
             </div>
 
             <div class="col-12">
-              <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <label for="lastName" class="form-label">Mobile Number</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Mobile Number" value="<?php echo $user['mobileno'] ?>" disabled required>
+              <div class="invalid-feedback">
+                Valid Mobile Number is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email
+                <!-- <span class="text-muted">(Optional)</span> -->
+              </label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" value="<?php echo $user['email'] ?>" disabled>
               <div class="invalid-feedback">
                 Please enter a valid email address for shipping updates.
               </div>
@@ -135,18 +154,18 @@
 
             <div class="col-12">
               <label for="address" class="form-label">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" value="<?php echo $user['address'] ?>" disabled required>
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
             </div>
 
-            <div class="col-12">
+            <!-- <div class="col-12">
               <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
               <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-            </div>
+            </div> -->
 
-            <div class="col-md-5">
+            <!-- <div class="col-md-5">
               <label for="country" class="form-label">Country</label>
               <select class="form-select" id="country" required>
                 <option value="">Choose...</option>
@@ -155,9 +174,9 @@
               <div class="invalid-feedback">
                 Please select a valid country.
               </div>
-            </div>
+            </div> -->
 
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
               <label for="state" class="form-label">State</label>
               <select class="form-select" id="state" required>
                 <option value="">Choose...</option>
@@ -166,11 +185,11 @@
               <div class="invalid-feedback">
                 Please provide a valid state.
               </div>
-            </div>
+            </div> -->
 
             <div class="col-md-3">
               <label for="zip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <input type="text" class="form-control" id="zip" placeholder="" value="<?php echo $user['pincode'] ?>" disabled required>
               <div class="invalid-feedback">
                 Zip code required.
               </div>
@@ -179,7 +198,7 @@
 
           <hr class="my-4">
 
-          <div class="form-check">
+          <!-- <div class="form-check">
             <input type="checkbox" class="form-check-input" id="same-address">
             <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
           </div>
@@ -187,11 +206,9 @@
           <div class="form-check">
             <input type="checkbox" class="form-check-input" id="save-info">
             <label class="form-check-label" for="save-info">Save this information for next time</label>
-          </div>
+          </div> -->
 
-          <hr class="my-4">
-
-          <h4 class="mb-3">Payment</h4>
+          <!-- <h4 class="mb-3">Payment</h4>
 
           <div class="my-3">
             <div class="form-check">
@@ -210,7 +227,7 @@
 
           <div class="row gy-3">
             <div class="col-md-6">
-              <label for="cc-name" class="form-label">Name on card</label>
+              <label for="cc-name" class="form-label">Name on Card</label>
               <input type="text" class="form-control" id="cc-name" placeholder="" required>
               <small class="text-muted">Full name as displayed on card</small>
               <div class="invalid-feedback">
@@ -219,7 +236,7 @@
             </div>
 
             <div class="col-md-6">
-              <label for="cc-number" class="form-label">Credit card number</label>
+              <label for="cc-number" class="form-label">Card number</label>
               <input type="text" class="form-control" id="cc-number" placeholder="" required>
               <div class="invalid-feedback">
                 Credit card number is required
@@ -243,23 +260,26 @@
             </div>
           </div>
 
-          <hr class="my-4">
+          <hr class="my-4"> -->
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to checkout</button>
         </form>
+        <form action="index.php?page=placeorder" method="post">
+          <input class="w-100 btn btn-primary btn-lg" type="submit" value="Place Order"></input>
+      </form>
       </div>
     </div>
   </main>
 
-  <footer class="my-5 pt-5 text-muted text-center text-small">
+  <!-- <footer class="my-5 pt-5 text-muted text-center text-small">
     <p class="mb-1">&copy; 2017–2021 Company Name</p>
     <ul class="list-inline">
       <li class="list-inline-item"><a href="#">Privacy</a></li>
       <li class="list-inline-item"><a href="#">Terms</a></li>
       <li class="list-inline-item"><a href="#">Support</a></li>
     </ul>
-  </footer>
+  </footer> -->
 </div>
+<br>
 
 
 <!--     <script src="bootstrap.bundle.min.js"></script>

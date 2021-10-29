@@ -54,7 +54,7 @@ if (isset($_POST['update']) && isset($_SESSION['testcart'])) {
 }
 // Send the user to the place order page if they click the Place Order button, also the cart should not be empty
 if (isset($_POST['placeorder']) && isset($_SESSION['testcart']) && !empty($_SESSION['testcart'])) {
-    header('Location: index.php?page=placeorder');
+    header('Location: index.php?page=checkout');
     unset($_SESSION['testcart']);
 
     exit;

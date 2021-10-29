@@ -3,8 +3,8 @@
 require "config.php";
  
 // Define variables and initialize with empty values
-$username = $password = $confirm_password = $address = $email = $mobileno = "";
-$username_err = $password_err = $confirm_password_err = $email_err = $address_err = $mobileno_err = $pincode = "";
+$username = $password = $confirm_password = $address = $email = $mobileno = $name = "";
+$username_err = $password_err = $confirm_password_err = $email_err = $address_err = $mobileno_err = $pincode = $name_err = "";
  
 // Processing form data when form is submitted
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -60,6 +60,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         }
     }
 
+
+    if(empty(trim($_POST["name"]))){
+        $name_err = "Please Enter your Name.";
+    } else if (!preg_match ("/^[a-zA-z]*$/", $name) ) {
+        $name_err = "Only alphabets and whitespace are allowed.";
+    }else{
+        $name = trim($_POST["name"]);
+    }
+
+
     $mobileno = $_POST["mobileno"];  
     if (!preg_match ("/^[0-9]*$/", $mobileno)){  
         $mobileno_err = "Only numeric value is allowed.";
@@ -95,23 +105,25 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
     // Check input errors before inserting in database
-    if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($email_err) && empty($mobileno_err) && empty($address_err) && empty($pincode_err)){
-        
+    if(empty($username_err) && empty($name_err) && empty($password_err) && empty($confirm_password_err) && empty($email_err) && empty($mobileno_err) && empty($address_err) && empty($pincode_err)){
+
         // Prepare an insert statement
-        $sql = "INSERT INTO users (username, password, email, mobileno, pincode, address) VALUES (:username, :password, :email, :mobileno, :pincode, :address)";
-         
+        $sql = "INSERT INTO users (username, password, name, email, mobileno, pincode, address) VALUES (:username, :password, :name, :email, :mobileno, :pincode, :address)";
+
         if($stmt = $pdo->prepare($sql)){
             // Bind variables to the prepared statement as parameters
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
             $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
+            $stmt->bindParam(":name", $param_name, PDO::PARAM_STR);
             $stmt->bindParam(":email", $param_email, PDO::PARAM_STR);
             $stmt->bindParam(":mobileno", $param_mobileno, PDO::PARAM_STR);
             $stmt->bindParam(":address", $param_address, PDO::PARAM_STR);
             $stmt->bindParam(":pincode", $param_pincode, PDO::PARAM_STR);
-            
+
             // Set parameters
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            $param_name = $name;
             $param_email = $email;
             $param_mobileno = $mobileno;
             $param_address = $address;
@@ -153,6 +165,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <h2>Sign Up</h2>
         <p>Please fill this form to create an account.</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <div class="form-group">
+              <label>Name</label>
+              <input type="text" name="name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
+              <span class="invalid-feedback"><?php echo $name_err; ?></span>
+          </div>
             <div class="form-group">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">

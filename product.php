@@ -37,7 +37,6 @@ if (isset($_GET['product_id'])) {
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
     </style>
 
-    <title>Document</title>
 </head>
 
 <body>
@@ -129,7 +128,7 @@ if (isset($_GET['product_id'])) {
             <div class="container-fluid" style=" background-color: #fff; padding: 11px;">
                 <div class="row">
                     <div class="col-lg-4 order-lg-2 order-1" style="margin-right:50px">
-                        <div class="image_selected"><img src="Images/<?= $product['image_link'] ?>" width="90%"class="magnifiedImg" alt="<?= $product['product_id'] ?>"></div>
+                        <div class="image_selected"><img src="Images/<?= $product['image_link'] ?>" width="90%" class="magnifiedImg" alt="<?= $product['product_id'] ?>"></div>
                     </div>
                     <div class="col-lg-6 order-3">
                         <div class="product_description">

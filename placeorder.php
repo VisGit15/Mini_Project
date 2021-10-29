@@ -12,10 +12,11 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello, world!</title>
+  <title>Order</title>
   <link href="bootstrap.min.css" rel="stylesheet">
   <link href="carousel.css" rel="stylesheet">
   <link href="searchbar.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -48,6 +49,12 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <li class="nav-item" style="margin-right: 2%;">
           <a class="nav-link active" aria-current="page" href="prod_cameras.php">Cameras</a>
         </li>
+        <li class="nav-item" style="margin-right: 2%;">
+            <a class="nav-link active" aria-current="page" href="prod_consoles.php">Consoles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="prod_watches.php">SmartWatches</a>
+          </li>
 
       </ul>
       <!-- <form class="d-flex" style="margin-right: 5%;margin-left: 20%;">
@@ -55,7 +62,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form> -->
 
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
         <li class="nav-item" style="margin-right: 2%;">
           <a class="nav-link active" aria-current="page" href="index.php?page=profile">
             <span class="material-icons md-18">account_circle</span></a>
@@ -73,7 +80,7 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </div>
   </div>
 </nav>
-<br><br>
+<br><br><br><br><br>
 <?php foreach ($users as $user) : ?>
   <!-- <div class="d-flex flex-column align-items-center text-center p-3 py-5">
     <img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
@@ -81,13 +88,15 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <span class="text-black-50"><?php echo $user['id'] ?></span>
     <span> </span></div> -->
 <?php endforeach; ?>
-<div>
+<div style="text-align:left;display:block; margin-left:10px; margin-right:10px;" class="postcard">
   <br>
   <br>
   <br>
   <br>
-    <h1><?php echo $user['username'] ?></h1>
-    <p>Thank you for ordering with us, we'll contact you by email with your order details.</p>
+    <h4 style="margin-left:10px;">Name : <?php echo $user['name'] ?></h4>
+    <h4 style="margin-left:10px;">Mobile Number : <?php echo $user['mobileno'] ?></h4>
+    <h4 style="margin-left:10px;">Address : <?php echo $user['address'] ?></h4>
+    <p style="margin-left:10px;">Thank you for ordering with us.</p>
 </div>
 
 <!-- <div class="container">

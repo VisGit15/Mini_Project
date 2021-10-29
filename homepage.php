@@ -197,11 +197,9 @@
         <hr class="featurette-divider">
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading">Apple iPhone 13 Mini
-            </h2>
-            <p class="lead">
-            <!-- <h3>Oh.So.Pro<h3> -->
-                </p><br>
+          <h2 class="featurette-heading">Apple iPhone 13 Mini</h2>
+          <p class="lead">
+            </p><br>
                 <p>Chipset : Apple A15 Bionic (5 nm)</p>
                 <p>Display : Super Retina XDR OLED 6.1 inches</p>
                 <p>Internal : 512GB 4GB RAM</p>
